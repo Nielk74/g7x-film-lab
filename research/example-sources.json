@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "retrieved_utc": "2026-11-12T02:15:55.386028+00:00",
+  "purpose": "Redistributable source photographs for identical-input comparisons across all five LUTs. Four are processed digital photographs from other cameras; one is a native Canon software render of a G7 X III RAW file. These are not matched film scans or out-of-camera JPEG demonstrations.",
+  "images": [
+    {
+      "id": "skin-portrait",
+      "name": "Victor Glover inside the Kibo laboratory, portrait crop",
+      "author": "NASA",
+      "category": "skin, neutral fabric, whites, blue objects and deep shadow",
+      "url": "https://images-assets.nasa.gov/image/iss064e044145/iss064e044145~orig.jpg",
+      "source_page": "https://www.nasa.gov/image-article/astronaut-victor-glover-inside-kibo-laboratory-module/",
+      "original_publisher": "https://images.nasa.gov/details/iss064e044145",
+      "nasa_id": "iss064e044145",
+      "license": "NASA public-domain content; informational use under NASA media guidelines",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "evidence": "NASA JSC image record and NASA article identify NASA imagery of Victor Glover on 2021-03-17. Original EXIF records Nikon D5 digital capture. NASA media guidelines allow factual informational use with NASA credit; this is an illustrative photograph, not project branding or an endorsement.",
+      "evidence_url": "https://images-api.nasa.gov/search?nasa_id=iss064e044145",
+      "path": "examples/source/skin-portrait.jpg",
+      "original_download_sha256": "415ebbe9a60bdca7ef247302b8b7fb723c69f81e572403d3e5f754249a8f5c22",
+      "original_download_sha1": "bd79f1b5e35e6f269fef9b7e90a43ea6f73afa88",
+      "original_download_bytes": 2421147,
+      "original_dimensions": [
+        5568,
+        3712
+      ],
+      "original_mode": "RGB",
+      "original_embedded_profile": "sRGB IEC61966-2.1",
+      "original_exif_color_space": null,
+      "original_exif_camera": "NIKON D5",
+      "original_exif_credit": {
+        "271": "NIKON CORPORATION",
+        "272": "NIKON D5",
+        "315": null,
+        "33432": null
+      },
+      "crop_box_xyxy": [
+        1900,
+        900,
+        3700,
+        2900
+      ],
+      "output_dimensions": [
+        1440,
+        1600
+      ],
+      "output_sha256": "ac9ea3a9a611a1ba34903067be9c4e1e86aa610dd2e621264d3164e102cf567c",
+      "output_bytes": 941646,
+      "output_color_space": "sRGB, embedded ICC",
+      "source_color_interpretation": "Converted from embedded profile",
+      "changes": [
+        "EXIF orientation applied",
+        "converted to RGB",
+        "source embedded profile converted to sRGB",
+        "cropped to upper-body portrait at source-pixel box (1900, 900, 3700, 2900)",
+        "downsampled crop to longest edge 1600 px",
+        "saved JPEG quality97, 4:4:4, optimized, embedded sRGB ICC; no look applied"
+      ],
+      "film_scan": false,
+      "camera_specific_example": false
+    },
+    {
+      "id": "warm-coffee",
+      "name": "Coffee at Pikolo Espresso Bar",
+      "author": "Rachel Michetti",
+      "category": "warm interior, porcelain whites, wood and brown tones",
+      "url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.25.2/skimage/data/coffee.png",
+      "source_page": "https://scikit-image.org/docs/0.25.x/api/skimage.data.html#skimage.data.coffee",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "evidence": "scikit-image v0.25.2 documentation explicitly states CC0 by photographer Rachel Michetti and credits Pikolo Espresso Bar.",
+      "evidence_url": "https://github.com/scikit-image/scikit-image/blob/v0.25.2/skimage/data/_fetchers.py",
+      "path": "examples/source/warm-coffee.jpg",
+      "original_download_sha256": "cc02f8ca188b167c775a7101b5d767d1e71792cf762c33d6fa15a4599b5a8de7",
+      "original_download_sha1": "12b3dd17187374ea93c22228e8e5c62939999148",
+      "original_download_bytes": 466706,
+      "original_dimensions": [
+        600,
+        400
+      ],
+      "original_mode": "RGB",
+      "original_embedded_profile": null,
+      "original_exif_color_space": null,
+      "output_dimensions": [
+        600,
+        400
+      ],
+      "output_sha256": "b6155f4f9f9246d355babf166ea9ac0a4901b5914a4fdbe2eaa8a8d1f6ecaec8",
+      "output_bytes": 181543,
+      "output_color_space": "sRGB, embedded ICC",
+      "source_color_interpretation": "No ICC available; interpreted source RGB as sRGB, not camera-calibrated",
+      "changes": [
+        "EXIF orientation applied",
+        "converted to RGB",
+        "source RGB treated as sRGB",
+        "downsampled to longest edge 1600 px only when larger",
+        "saved JPEG quality97, 4:4:4, optimized, embedded sRGB ICC; no look applied"
+      ],
+      "film_scan": false,
+      "camera_specific_example": false
+    },
+    {
+      "id": "landscape-sky",
+      "name": "Landscape, nature, sky and clouds",
+      "author": "Ed Gregory / www.Pixel.la Free Stock Photos",
+      "category": "green landscape, blue sky, clouds and distant shadow",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Landscape-nature-sky-clouds_%2823958729879%29.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Landscape-nature-sky-clouds_(23958729879).jpg",
+      "original_publisher": "https://www.flickr.com/photos/137643065@N06/23958729879/",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "evidence": "Commons file description states CC0; its Flickr review confirmed CC0 on 2016-09-16. EXIF credits Ed Gregory; uploader account identifies www.Pixel.la Free Stock Photos.",
+      "evidence_url": "https://commons.wikimedia.org/w/index.php?title=File:Landscape-nature-sky-clouds_(23958729879).jpg&oldid=1256451202",
+      "expected_sha1": "ae78d0792614bba0d93bfb7bab058cbaa4a4dc53",
+      "path": "examples/source/landscape-sky.jpg",
+      "original_download_sha256": "6abd4b3179a5af1d98853f7bc5ef731647b21a35141c68862cb01847e2c5a3c9",
+      "original_download_sha1": "ae78d0792614bba0d93bfb7bab058cbaa4a4dc53",
+      "original_download_bytes": 5519696,
+      "original_dimensions": [
+        4288,
+        2848
+      ],
+      "original_mode": "RGB",
+      "original_embedded_profile": "sRGB IEC61966-2.1",
+      "original_exif_color_space": null,
+      "output_dimensions": [
+        1600,
+        1063
+      ],
+      "output_sha256": "c00026fbb7e052eeced25a178e09e3fb39bda6b470646a576d28a8b21e731cba",
+      "output_bytes": 734258,
+      "output_color_space": "sRGB, embedded ICC",
+      "source_color_interpretation": "Converted from embedded profile",
+      "changes": [
+        "EXIF orientation applied",
+        "converted to RGB",
+        "embedded source profile converted to sRGB",
+        "downsampled to longest edge 1600 px only when larger",
+        "saved JPEG quality97, 4:4:4, optimized, embedded sRGB ICC; no look applied"
+      ],
+      "film_scan": false,
+      "camera_specific_example": false
+    },
+    {
+      "id": "night-city",
+      "name": "Singapore skyline at night with black sky",
+      "author": "Merlion444",
+      "category": "night, bright colored lights and deep shadows",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Singapore_Skyline_at_Night_with_Black_Sky.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Singapore_Skyline_at_Night_with_Black_Sky.JPG",
+      "license": "CC0-1.0 / public domain dedication",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "evidence": "Author own-work file description releases image worldwide into public domain and additionally offers CC0. Commons API reported public domain.",
+      "evidence_url": "https://commons.wikimedia.org/wiki/File:Singapore_Skyline_at_Night_with_Black_Sky.JPG",
+      "expected_sha1": "3043d950daf364f1c74f8a18589cd0b23863a04b",
+      "path": "examples/source/night-city.jpg",
+      "original_download_sha256": "c8ae917041253c3943d9966a4cd95734704cba618e677917f5e12316423b4f4c",
+      "original_download_sha1": "3043d950daf364f1c74f8a18589cd0b23863a04b",
+      "original_download_bytes": 3833856,
+      "original_dimensions": [
+        3872,
+        2176
+      ],
+      "original_mode": "RGB",
+      "original_embedded_profile": null,
+      "original_exif_color_space": null,
+      "output_dimensions": [
+        1600,
+        899
+      ],
+      "output_sha256": "4b39d6a7eb6010f95fb1f92e00c956e75181566be36ea1a0eaed1aa4e05e152c",
+      "output_bytes": 895186,
+      "output_color_space": "sRGB, embedded ICC",
+      "source_color_interpretation": "No ICC available; interpreted source RGB as sRGB, not camera-calibrated",
+      "changes": [
+        "EXIF orientation applied",
+        "converted to RGB",
+        "source RGB treated as sRGB",
+        "downsampled to longest edge 1600 px only when larger",
+        "saved JPEG quality97, 4:4:4, optimized, embedded sRGB ICC; no look applied"
+      ],
+      "film_scan": false,
+      "camera_specific_example": false
+    },
+    {
+      "id": "g7x-iii-canon-neutral",
+      "name": "G7 X III creek landscape, native Canon Neutral RAW render",
+      "author": "raw.pixls.us contributor (name not supplied in inspected record)",
+      "category": "G7 X III RAW, autumn foliage, blue sky, creek and neutral stones",
+      "url": "https://raw.pixls.us/getfile.php/6053/nice/Canon%20-%20PowerShot%20G7%20X%20Mark%20III%20-%203%3A2.CR3",
+      "source_page": "https://raw.pixls.us/",
+      "source_record_id": 6053,
+      "source_record_date": "2022-10-21",
+      "original_filename": "IMG_0253.CR3",
+      "original_exif_camera": "Canon PowerShot G7 X Mark III",
+      "original_format": "Canon CR3 RAW (normal RAW, not C-RAW)",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "evidence": "raw.pixls.us record 6053 marks this normal G7 X III RAW file CC0 and publishes its SHA-256. The submission form requires the contributor to own the rights and release the file under CC0. No individual photographer name was supplied in the inspected record or public metadata.",
+      "evidence_url": "https://raw.pixls.us/",
+      "public_metadata_url": "https://raw.pixls.us/getfile.php/6053/exif/IMG_0253.CR3.exif.txt",
+      "path": "examples/source/g7x-iii-canon-neutral.png",
+      "original_download_sha256": "63ce623055dd2ac7374e0b1c645a4eabc7e181cd12c2039625f64b4e63a5ee86",
+      "original_download_bytes": 31329912,
+      "original_raw_redistributed": false,
+      "output_dimensions": [
+        1620,
+        1080
+      ],
+      "output_sha256": "d5645ada59c37c92ed2a0adc4979afac0d6deb60128ddf55e2a83a3ce063605b",
+      "output_bytes": 2619199,
+      "output_color_space": "sRGB as declared by the native Canon render; no embedded ICC profile",
+      "changes": [
+        "Native Canon DppCore RAW render with Neutral picture style (0x84)",
+        "As Shot white balance, exposure compensation 0 EV, sharpening 0",
+        "Rendered at 1620 by 1080 pixels and saved as RGB PNG; source composition retained",
+        "No film look applied to this source file"
+      ],
+      "film_scan": false,
+      "camera_specific_example": true,
+      "camera_jpeg": false,
+      "native_canon_render": true,
+      "interpretation_limit": "This is a G7 X III RAW developed by Canon software. Applying a LUT to this PNG demonstrates the same camera source, but does not demonstrate a PF3 installed on the camera, an out-of-camera JPEG, or a measured match to physical film."
+    }
+  ]
+}

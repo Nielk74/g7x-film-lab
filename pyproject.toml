@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "g7x-film-lab"
+version = "0.1.0"
+description = "Five data-based film looks as sRGB LUTs and Canon PF3 Picture Styles"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["numpy>=2.0,<3", "Pillow>=11,<14"]
+
+[project.optional-dependencies]
+research = ["scipy>=1.15,<2", "matplotlib>=3.9,<4", "colour-science>=0.4.6,<0.5", "rawpy>=0.25,<0.29"]
+
+[project.scripts]
+g7x-film = "g7xfilm.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

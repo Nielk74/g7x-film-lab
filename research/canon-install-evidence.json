@@ -1,0 +1,321 @@
+{
+  "verified_date": "2026-11-12",
+  "target_camera": "Canon PowerShot G7 X Mark III",
+  "scope": {
+    "camera_connected": false,
+    "camera_profile_written": false,
+    "firmware_written": false,
+    "system_application_installed": false,
+    "windows_gui_executed": false,
+    "mac_registration_gui_executed": false
+  },
+  "official_software": {
+    "picture_style_editor": {
+      "version": "1.33.10",
+      "download_url": "https://gdlp01.c-wss.com/gds/0/0200007750/01/psem1.33.10-installer.zip",
+      "zip_sha256": "499e087ad37f56fa19b31bdf78d149fb51901f4b3d4e4c732b03674ae56e35a9",
+      "extraction": "Standard flat pkg expanded into a private research directory with pkgutil --expand-full; installer scripts were not run"
+    },
+    "registration_tool_mac": {
+      "version": "1.1.0.4",
+      "public_release_label": "1.1.0",
+      "support_url": "https://sg.canon/en/support/0200746802",
+      "listed_os": [
+        "macOS 13",
+        "macOS 14",
+        "macOS 15"
+      ],
+      "apple_silicon_native": true,
+      "launch_location": "Applications/Canon Utilities/Picture Style File Registration Tool",
+      "installer_executed": false
+    },
+    "registration_tool_windows": {
+      "version": "1.1.0.4",
+      "support_url": "https://sg.canon/en/support/0200746702",
+      "download_url": "https://gdlp01.c-wss.com/gds/7/0200007467/01/psrtw1.1.0.4-installer.zip",
+      "listed_os": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "exe_sha256": "cdadbd04affe04d137e4983eb4dc6851dd02b9d022a63f4e87b01f73e7573efe",
+      "installer_executed": false
+    }
+  },
+  "native_parser_test": {
+    "evidence_type": "Measured execution of the shipped Canon EdsCFParse parser in an isolated Python process; no Canon GUI or camera APIs",
+    "host_os": "26.4.1",
+    "architecture": "arm64",
+    "canon_version": "PSE 1.33.10",
+    "result": {
+      "library_sha256": "1d3860617a1d3508a1393cde7f1800a328a2311ef082aa83f5ec0e029df205e9",
+      "initialize": 0,
+      "files": [
+        {
+          "path": "resources/neutral-calibration.pf3",
+          "sha256": "76b0c3bc266931321e8e27e3e5b8cff07ccc4136971a3154b36c7e7ae3183ae4",
+          "create_ref_rc": 0,
+          "nonnull_ref": true,
+          "properties": [
+            {
+              "id": "0x114",
+              "size_rc": 0,
+              "kind": 9,
+              "size": 4,
+              "get_rc": 0,
+              "data_sha256": "1fa12ddcd1115032e8903f915254b2193a8734b17e9210d552108b7716ee529b",
+              "data_hex": "84000000"
+            },
+            {
+              "id": "0x115",
+              "size_rc": 0,
+              "kind": 102,
+              "size": 32,
+              "get_rc": 0,
+              "data_sha256": "586bb6ad1227ad587c83d5c16601b0e242931b3fe07ad8ed4f233236c58a9cae",
+              "data_hex": "0000000000000000000000000000000000000000000000000200000004000000"
+            },
+            {
+              "id": "0x40001002",
+              "size_rc": 0,
+              "kind": 2,
+              "size": 32,
+              "get_rc": 0,
+              "data_sha256": "832cc24e61f859acfebad3ba12b3bcfbcd91fe82d1851489b912edb0431d85df",
+              "data_hex": "473758204c6162204964656e7469747900000000000000000000000000000000"
+            },
+            {
+              "id": "0x40001070",
+              "size_rc": 0,
+              "kind": 32,
+              "size": 215628,
+              "get_rc": 0,
+              "data_sha256": "7a5c2f3fc6aefc9c5f8e636a104d4f15a4c9ddc815c6236630e5baba436b5121"
+            },
+            {
+              "id": "0x40001071",
+              "size_rc": 0,
+              "kind": 32,
+              "size": 215628,
+              "get_rc": 0,
+              "data_sha256": "7a5c2f3fc6aefc9c5f8e636a104d4f15a4c9ddc815c6236630e5baba436b5121"
+            }
+          ],
+          "release_rc": 0
+        }
+      ],
+      "terminate": 0
+    },
+    "limits": [
+      "Parser acceptance is not a camera upload or camera-produced JPEG measurement",
+      "Canon runtime and installers are not redistributed with this project"
+    ],
+    "final_looks": {
+      "detailed_report": "research/canon-native-validation.json",
+      "count": 5,
+      "all_create_property_read_release_calls_successful": true,
+      "all_native_table_payloads_equal_release_manifest": true,
+      "all_dense_tables_match_full_desktop_CUBE_samples_within_half_12bit_code": true,
+      "profiles": [
+        {
+          "id": "portra400",
+          "path": "profiles/G7P400.PF3",
+          "sha256": "7c9b1560685f0176586ddc2d8aa3de1a1bc767c0206f085236a080cd5c99d28d"
+        },
+        {
+          "id": "gold200",
+          "path": "profiles/G7G200.PF3",
+          "sha256": "f96faa550bffc52192c5b6d16dfa5535726785ac81d9dd04654bb8e063e61429"
+        },
+        {
+          "id": "ektar100",
+          "path": "profiles/G7E100.PF3",
+          "sha256": "15194b4c96461b9a958cde382498360f5e7e7876d8316e87de365f2e59edcb2a"
+        },
+        {
+          "id": "pro400h",
+          "path": "profiles/G7F400.PF3",
+          "sha256": "bfccf7ec634adfda6ea348ab9cbd9c2b0d0f2bd0d1dcbe919b8c4315c3dc2c91"
+        },
+        {
+          "id": "trix400",
+          "path": "profiles/G7TX400.PF3",
+          "sha256": "f2aced9e09aa0724880985a67ca9feecbadaed7c2c041686769d7609a2fdf810"
+        }
+      ]
+    }
+  },
+  "registration_ui": {
+    "evidence_type": "Static extraction from Canon Windows 1.1.0.4 WPF BAML and .NET string resources",
+    "windows_labels": {
+      "camera_list": "Supported cameras connected via USB",
+      "first_action": "Register Picture Style File",
+      "slots": [
+        "User Def. 1",
+        "User Def. 2",
+        "User Def. 3"
+      ],
+      "file_control": "Per-slot folder icon, resource/file_browse.png",
+      "final_action": "Register",
+      "success_message": "Registration of the Picture Style file is complete.",
+      "file_filter": "Picture Style files(*.pf2, *.pf3)"
+    },
+    "bounded_observations": [
+      "SelectCameraWindow contains the connected-camera list and registration action",
+      "RegisterWindow contains the three slot tabs, per-slot browse controls and final Register button",
+      "Resources reject a conflicting Canon connection application and an unsupported shooting mode",
+      "No assertion that Mac has byte-identical labels or that the GUI was exercised"
+    ],
+    "rea_managed_exe_evidence_id": "ev_d5e1a1e46319374cd25a7b6a04da2064513516fd7a376334e54b7068acaf2470",
+    "rea_english_resource_evidence_id": "ev_5cefef524c2942fc0309729540252430db69b0cd7a1cbf18dd19848930902d1d"
+  },
+  "rea": {
+    "version": "6.7.0",
+    "psrt_dmg_inspection_evidence_id": "ev_9b98432fc99d2c1eb552f72a139faf0475f579851ab11a59da45f522addbe32a",
+    "pse_parser_macho_evidence_id": "ev_b54c695986684dad0180c99a7fad96c095773925205590c646f2738e367aa14e",
+    "limits": [
+      "REA artifact and managed inspection are static; native parser probe execution is separately labeled ordinary ctypes evidence",
+      "No native decompilation engine was installed"
+    ]
+  },
+  "sources": [
+    "https://app.ssw.imaging-saas.canon/app/en/pse.html",
+    "https://sg.canon/en/support/0200746802",
+    "https://sg.canon/en/support/0200746702",
+    "https://gdlp01.c-wss.com/gds/8/0300035728/07/psg7x-mk3-ug7-en.pdf"
+  ],
+  "native_raw_render": {
+    "evidence_type": "Measured offline execution of staged Canon PSE 1.33.10 DppCore on one CC0 G7 X Mark III RAW; not a camera-produced JPEG",
+    "dppcore_sha256": "3da39fdfb4e60531628afd4e1b58d90fe66630ff5423d5ce5d5ed8bb91f63bbb",
+    "raw": {
+      "source_url": "https://raw.pixls.us/getfile.php/6053/nice/Canon%20-%20PowerShot%20G7%20X%20Mark%20III%20-%203:2.CR3",
+      "sha256": "63ce623055dd2ac7374e0b1c645a4eabc7e181cd12c2039625f64b4e63a5ee86",
+      "license": "CC0 according to raw.pixls.us"
+    },
+    "settings": {
+      "base_style": "Neutral (0x84)",
+      "white_balance": "As Shot",
+      "exposure_compensation": 0,
+      "contrast": 0,
+      "saturation": 0,
+      "color_tone": 0,
+      "sharpness_strength": 0,
+      "output_size": [
+        1620,
+        1080
+      ]
+    },
+    "neutral_output": {
+      "path": "examples/source/g7x-iii-canon-neutral.png",
+      "sha256": "d5645ada59c37c92ed2a0adc4979afac0d6deb60128ddf55e2a83a3ce063605b",
+      "second_and_third_pass_pixel_identical": true
+    },
+    "activation_controls": [
+      {
+        "change": "SetPictureStyleFile with missing file",
+        "result": 2
+      },
+      {
+        "change": "SetPictureStyleFile with corrupt 8-byte file",
+        "result": 44
+      },
+      {
+        "change": "Valid profile, active additional-file Picture Style 0xff, zero 0x1021 and 0x1029 matrices",
+        "result": "All rendered pixels RGB 0,0,0"
+      },
+      {
+        "change": "Same valid profile, active 0xff, identity matrices and both dense tables 0x1070 and 0x1071 all black",
+        "result": "Rendered Neutral unchanged; dense-table parser acceptance does not prove visual use"
+      }
+    ],
+    "measured_parametric_stages": {
+      "active_matrix_this_render": "0x1021",
+      "alternate_matrix_0x1029_half_red": "Byte-identical to identity control on this RAW/render mode",
+      "rgb_order": [
+        "0x1018 per-channel pre-curves",
+        "0x1021 19-term polynomial",
+        "0x1065 per-channel post-curves"
+      ],
+      "order_control": "With R output routed from B, altering only the red 0x1018 curve has no effect; altering only red 0x1065 changes red output",
+      "luminance_curve": "Changing only the first channel of 0x1019 changes all output RGB channels",
+      "limits": "One camera RAW and one offline Canon rendering mode; alternate camera compiler paths require separate validation",
+      "basis_controls": {
+        "first_row_word3": "R squared; mean red deviation 0.73/255 against squared identity rendering",
+        "first_row_word13": "RGB product; mean red deviation 1.98/255 against product of identity rendering",
+        "first_row_word19": "Unused in this mode: native output byte-identical to a zero first row",
+        "scope": "Empirical consistency on one RAW rendering; full standard monomial order used by the independently authored fitter"
+      }
+    },
+    "limits": [
+      "An offline Canon RAW render is not physical G7 X Mark III registration or JPEG validation",
+      "Final five creative profile results are recorded in research/canon-native-validation.json",
+      "No Canon runtime, installer or RAW binary is redistributed as part of this evidence"
+    ],
+    "final_looks": {
+      "detailed_report": "research/canon-native-validation.json",
+      "image_directory": "examples/canon-native",
+      "count": 5,
+      "all_profiles_changed_output": true,
+      "all_second_third_passes_identical": true,
+      "desktop_vs_native_mean_delta_e76_range": [
+        0.3958269227984366,
+        1.9013355343400977
+      ],
+      "scope": "Desktop preview approximation agreement on one scene; the full dense camera table follows the separately verified compiler route, and physical camera acceptance remains untested"
+    }
+  },
+  "registration_compilation": {
+    "evidence_type": "Static CIL inspection of shipped Canon Windows PSRT 1.1.0.4",
+    "method": "PictureStyleFileRegistrationTool.PSFileRegister.GetUserStyleDataFromFile",
+    "method_token": "0x060000d8",
+    "observed_flow": [
+      "Open selected profile through CustomFileParser.Create",
+      "Set property 0x01000001 to camera ModelID",
+      "If available, set camera PictureStyleLutParam descriptor as property 0x01000210",
+      "Read compiler carrier property 0x01000203"
+    ],
+    "rea_evidence_id": "ev_421728bbf8899ced965b120758a9d97cc4b1c8d35d5f6d10cec6426d1990b6c2",
+    "offline_probe_status": "Validated dense-table consumption with the nested native Canon parser, adjacent MLib and explicit math-function initialization; positive control changes only dense RGB tables",
+    "physical_registration_verified": false,
+    "native_compiler_test": {
+      "evidence_type": "Measured offline Canon EdsCFParse/MLib execution, model0x808; no camera APIs",
+      "parser_version": "3.19.0.0",
+      "parser_sha256": "b16b0cbf683989408e5509714de6d83c81bbdb4e054f17c9d5aa063d94a7d762",
+      "mlib_version": "1.4.2.0",
+      "mlib_sha256": "ebfd7db08f8febacc8d3a9f62224c3aa95ca5f4a0f4b6f16c7211075db0740be",
+      "math_functions_loaded": true,
+      "model_id": "0x808",
+      "carrier_property": "0x01000203",
+      "carrier_size": 16752,
+      "all_carrier_open_model_set_size_read_release_calls_successful": true,
+      "controls": {
+        "only_profile_fields_changed": [
+          "0x1070",
+          "0x1071"
+        ],
+        "identity_profile_sha256": "76b0c3bc266931321e8e27e3e5b8cff07ccc4136971a3154b36c7e7ae3183ae4",
+        "black_profile_sha256": "6605abcdd311a64b90bfcc81874207b26d40803aee69d5a302d87db6f8ff1e87",
+        "identity_carrier_sha256": "3d99085ed12e63cf5de624445d55c1dc1d31b94f0dc651a93088f54b1ee5d809",
+        "black_carrier_sha256": "272d6b11f28f15045beaf3514803599d363ed09e6414d90d369bf224dd1a6c35",
+        "carrier_changed_bytes": 15484,
+        "first_changed_offset": 372,
+        "matrix_half_with_identity_dense": "Identical carrier to identity profile in a separate native control"
+      },
+      "interpretation": "For this offline compilation route the dense table controls the camera carrier; the desktop preview matrix does not substitute for it",
+      "limits": [
+        "Offline compilation is not physical USB registration or camera JPEG validation",
+        "Camera carriers and Canon runtimes remain private and are not redistributed",
+        "A top-level parser probe without working MLib was inconclusive and is superseded by these positive controls"
+      ]
+    },
+    "final_looks": {
+      "detailed_report": "research/canon-camera-compiler-validation.json",
+      "same_final_profile_hashes_as_native_preview_report": true,
+      "count": 5,
+      "all_five_compiled": true,
+      "all_five_color_data_tails_distinct": true,
+      "carrier_size_each": 16752,
+      "camera_descriptor_supplied": false,
+      "physical_registration_tested": false
+    }
+  }
+}

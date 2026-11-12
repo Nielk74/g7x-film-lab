@@ -1,0 +1,559 @@
+{
+  "verified_date": "2026-11-12",
+  "method": "Offline execution of Canon PSE 1.33.10 DppCore and EdsCFParse, staged from the official installer without installation. Each PF3 is loaded through DppSetPictureStyleFile and activated as additional-file Picture Style 0xff. No camera API, device connection or camera write was used.",
+  "raw": {
+    "source_url": "https://raw.pixls.us/getfile.php/6053/nice/Canon%20-%20PowerShot%20G7%20X%20Mark%20III%20-%203:2.CR3",
+    "sha256": "63ce623055dd2ac7374e0b1c645a4eabc7e181cd12c2039625f64b4e63a5ee86",
+    "license": "CC0 per raw.pixls.us"
+  },
+  "canon_runtime": {
+    "pse_version": "1.33.10",
+    "dppcore_sha256": "3da39fdfb4e60531628afd4e1b58d90fe66630ff5423d5ce5d5ed8bb91f63bbb",
+    "parser_sha256": "1d3860617a1d3508a1393cde7f1800a328a2311ef082aa83f5ec0e029df205e9",
+    "host_os": "macOS 26.4.1",
+    "architecture": "arm64",
+    "redistributed": false
+  },
+  "settings": {
+    "raw_process": "Fixed As Shot white balance, exposure compensation zero, Neutral base, contrast/saturation/color tone zero, sharpening strength zero; fixed sRGB output. Every profile uses identical settings.",
+    "output_size": [
+      1620,
+      1080
+    ],
+    "passes": 3,
+    "final_output": "Third pass",
+    "reason": "First-pass native warm-up may differ; pass 2 and 3 are compared below."
+  },
+  "baseline": {
+    "profile": "resources/neutral-calibration.pf3",
+    "profile_sha256": "76b0c3bc266931321e8e27e3e5b8cff07ccc4136971a3154b36c7e7ae3183ae4",
+    "image": "examples/canon-native/neutral.png",
+    "image_sha256": "98fe9b2cc5642dc8d369c3f653dec4adac3255c6ac9c19f57246f7bcd472bc7a",
+    "second_third_pass_identical": true,
+    "original_ns_icc_neutral_difference": {
+      "rgb_rmse": 0.0005792938491748319,
+      "rgb_max_error": 0.007843137254902044,
+      "delta_e76_mean": 0.030267269182503755,
+      "delta_e76_p95": 0.39539126724564155,
+      "delta_e76_max": 1.6481073751471187,
+      "rgb_mae_8bit": 0.021425278158817253,
+      "rgb_rmse_8bit": 0.14771993153958216,
+      "rgb_abs_error_p95_8bit": 0.0
+    }
+  },
+  "comparisons": {
+    "desktop_lut_vs_native_profile": "Apply the released 65-cubed desktop CUBE to the same Canon identity rendering, then compare with Canon DppCore rendering the PF3 directly on the RAW. This measures implementation/approximation difference on one photograph, not fidelity to real film.",
+    "parametric_model_vs_native_preview": "Evaluate the PF3 preview curve and polynomial fields independently on the same identity rendering, then compare with native Canon PF3 rendering. This measures desktop preview integration and whole-pipeline differences. The dense camera table carries the full look and is verified separately.",
+    "delta_e": "Euclidean CIE Lab D65 (Delta E 1976), computed from sRGB outputs; this is not CIEDE2000."
+  },
+  "looks": [
+    {
+      "id": "portra400",
+      "profile": "profiles/G7P400.PF3",
+      "profile_sha256": "7c9b1560685f0176586ddc2d8aa3de1a1bc767c0206f085236a080cd5c99d28d",
+      "desktop_cube": "luts/portra400.cube",
+      "desktop_cube_sha256": "066e0e607fa69cdc99bb21e03cf008b0f51392332f8f6c7181886281d499b471",
+      "image": "examples/canon-native/portra400.png",
+      "image_sha256": "22476f233977a95ed3a29712177c55207a6760643a99b3e83c2022c2ce2a29bd",
+      "all_native_operations_successful": true,
+      "second_third_pass_identical": true,
+      "native_change_from_identity": {
+        "rgb_rmse": 0.02081250569420737,
+        "rgb_max_error": 0.09019607843137256,
+        "delta_e76_mean": 3.8045637952752354,
+        "delta_e76_p95": 7.859405748988268,
+        "delta_e76_max": 13.07110743307978,
+        "rgb_mae_8bit": 4.349457590306356,
+        "rgb_rmse_8bit": 5.307188952022879,
+        "rgb_abs_error_p95_8bit": 9.999999999999993
+      },
+      "desktop_lut_vs_native_profile": {
+        "rgb_rmse": 0.0070666949484625334,
+        "rgb_max_error": 0.07172948278039215,
+        "delta_e76_mean": 1.3971434228115238,
+        "delta_e76_p95": 3.046026326634511,
+        "delta_e76_max": 10.18698779737982,
+        "rgb_mae_8bit": 1.299290527676402,
+        "rgb_rmse_8bit": 1.802007211857946,
+        "rgb_abs_error_p95_8bit": 3.0356029099999913
+      },
+      "parametric_model_vs_native_preview": {
+        "rgb_rmse": 0.0034535887350226196,
+        "rgb_max_error": 0.04871800682207278,
+        "delta_e76_mean": 0.6775656396031188,
+        "delta_e76_p95": 1.3329608628635816,
+        "delta_e76_max": 6.703687900150805,
+        "rgb_mae_8bit": 0.6786211656040011,
+        "rgb_rmse_8bit": 0.880665127430768,
+        "rgb_abs_error_p95_8bit": 1.8180385868864475
+      },
+      "native_parser": {
+        "path": "profiles/G7P400.PF3",
+        "sha256": "7c9b1560685f0176586ddc2d8aa3de1a1bc767c0206f085236a080cd5c99d28d",
+        "create_ref_rc": 0,
+        "nonnull_ref": true,
+        "properties": [
+          {
+            "id": "0x114",
+            "size_rc": 0,
+            "kind": 9,
+            "size": 4,
+            "get_rc": 0,
+            "data_sha256": "1fa12ddcd1115032e8903f915254b2193a8734b17e9210d552108b7716ee529b",
+            "data_hex": "84000000"
+          },
+          {
+            "id": "0x115",
+            "size_rc": 0,
+            "kind": 102,
+            "size": 32,
+            "get_rc": 0,
+            "data_sha256": "586bb6ad1227ad587c83d5c16601b0e242931b3fe07ad8ed4f233236c58a9cae",
+            "data_hex": "0000000000000000000000000000000000000000000000000200000004000000"
+          },
+          {
+            "id": "0x40001002",
+            "size_rc": 0,
+            "kind": 2,
+            "size": 32,
+            "get_rc": 0,
+            "data_sha256": "ae5d444da6d6ec81c22737f78269044e3077cd830b26a2bc787182754b663f41",
+            "data_hex": "47375820506f7274726120343030000000000000000000000000000000000000"
+          },
+          {
+            "id": "0x40001070",
+            "size_rc": 0,
+            "kind": 32,
+            "size": 215628,
+            "get_rc": 0,
+            "data_sha256": "b0f4e1ba4a25eae05d359478a94d0a52a8a68ba3bc709c23b8e850ec13ee3c17"
+          },
+          {
+            "id": "0x40001071",
+            "size_rc": 0,
+            "kind": 32,
+            "size": 215628,
+            "get_rc": 0,
+            "data_sha256": "b0f4e1ba4a25eae05d359478a94d0a52a8a68ba3bc709c23b8e850ec13ee3c17"
+          }
+        ],
+        "release_rc": 0
+      },
+      "dense_table_vs_desktop_cube": {
+        "method": "Every second sample of the released 65-cubed CUBE compared with the full33-cubed PF3 table after12-bit quantization",
+        "maximum_absolute_channel_error": 0.0001220990244200637,
+        "half_12bit_code_bound": 0.0001221001221001221,
+        "passed": true
+      }
+    },
+    {
+      "id": "gold200",
+      "profile": "profiles/G7G200.PF3",
+      "profile_sha256": "f96faa550bffc52192c5b6d16dfa5535726785ac81d9dd04654bb8e063e61429",
+      "desktop_cube": "luts/gold200.cube",
+      "desktop_cube_sha256": "119a946d4ff915005939619ac78924991589f99d94a9eed4b7497514f75120ab",
+      "image": "examples/canon-native/gold200.png",
+      "image_sha256": "d92c983997fb903e5b8be440f64dfda2cd0068831213754ac0fefa91a92e99ac",
+      "all_native_operations_successful": true,
+      "second_third_pass_identical": true,
+      "native_change_from_identity": {
+        "rgb_rmse": 0.026760943362789478,
+        "rgb_max_error": 0.11372549019607847,
+        "delta_e76_mean": 4.78094218089936,
+        "delta_e76_p95": 8.35478905066898,
+        "delta_e76_max": 18.46264492309147,
+        "rgb_mae_8bit": 5.40420000762079,
+        "rgb_rmse_8bit": 6.824040557511317,
+        "rgb_abs_error_p95_8bit": 13.00000000000001
+      },
+      "desktop_lut_vs_native_profile": {
+        "rgb_rmse": 0.006713229076768985,
+        "rgb_max_error": 0.10756524171764704,
+        "delta_e76_mean": 1.386412020402868,
+        "delta_e76_p95": 2.9539763532048253,
+        "delta_e76_max": 13.05368672352139,
+        "rgb_mae_8bit": 1.2084795802242017,
+        "rgb_rmse_8bit": 1.711873414576091,
+        "rgb_abs_error_p95_8bit": 3.1482890917999824
+      },
+      "parametric_model_vs_native_preview": {
+        "rgb_rmse": 0.00358637663479885,
+        "rgb_max_error": 0.043091478711039355,
+        "delta_e76_mean": 0.7128571574492362,
+        "delta_e76_p95": 1.3864914084498936,
+        "delta_e76_max": 9.072549808855003,
+        "rgb_mae_8bit": 0.6959001729147957,
+        "rgb_rmse_8bit": 0.9145260418737067,
+        "rgb_abs_error_p95_8bit": 1.8614350674436368
+      },
+      "native_parser": {
+        "path": "profiles/G7G200.PF3",
+        "sha256": "f96faa550bffc52192c5b6d16dfa5535726785ac81d9dd04654bb8e063e61429",
+        "create_ref_rc": 0,
+        "nonnull_ref": true,
+        "properties": [
+          {
+            "id": "0x114",
+            "size_rc": 0,
+            "kind": 9,
+            "size": 4,
+            "get_rc": 0,
+            "data_sha256": "1fa12ddcd1115032e8903f915254b2193a8734b17e9210d552108b7716ee529b",
+            "data_hex": "84000000"
+          },
+          {
+            "id": "0x115",
+            "size_rc": 0,
+            "kind": 102,
+            "size": 32,
+            "get_rc": 0,
+            "data_sha256": "586bb6ad1227ad587c83d5c16601b0e242931b3fe07ad8ed4f233236c58a9cae",
+            "data_hex": "0000000000000000000000000000000000000000000000000200000004000000"
+          },
+          {
+            "id": "0x40001002",
+            "size_rc": 0,
+            "kind": 2,
+            "size": 32,
+            "get_rc": 0,
+            "data_sha256": "bc9f288bb8fd2307009034ea3b78598bc2699c8658f46a29f931ce44059b95e2",
+            "data_hex": "47375820476f6c64203230300000000000000000000000000000000000000000"
+          },
+          {
+            "id": "0x40001070",
+            "size_rc": 0,
+            "kind": 32,
+            "size": 215628,
+            "get_rc": 0,
+            "data_sha256": "df47216a0dd15edbe4a914420a249e1f86d3ea5b4f69143db4d2eb23025ef1a1"
+          },
+          {
+            "id": "0x40001071",
+            "size_rc": 0,
+            "kind": 32,
+            "size": 215628,
+            "get_rc": 0,
+            "data_sha256": "df47216a0dd15edbe4a914420a249e1f86d3ea5b4f69143db4d2eb23025ef1a1"
+          }
+        ],
+        "release_rc": 0
+      },
+      "dense_table_vs_desktop_cube": {
+        "method": "Every second sample of the released 65-cubed CUBE compared with the full33-cubed PF3 table after12-bit quantization",
+        "maximum_absolute_channel_error": 0.00012209991575096169,
+        "half_12bit_code_bound": 0.0001221001221001221,
+        "passed": true
+      }
+    },
+    {
+      "id": "ektar100",
+      "profile": "profiles/G7E100.PF3",
+      "profile_sha256": "15194b4c96461b9a958cde382498360f5e7e7876d8316e87de365f2e59edcb2a",
+      "desktop_cube": "luts/ektar100.cube",
+      "desktop_cube_sha256": "ce3d24118cacb663a7d25427e3eaedceaaa5a6cb27602680a154ad83e03dc650",
+      "image": "examples/canon-native/ektar100.png",
+      "image_sha256": "ac063fad9fd1887e8b0879f724fc081b436db2bc7b951e8a978916a8338333b3",
+      "all_native_operations_successful": true,
+      "second_third_pass_identical": true,
+      "native_change_from_identity": {
+        "rgb_rmse": 0.04068678743809453,
+        "rgb_max_error": 0.15294117647058825,
+        "delta_e76_mean": 7.002406664023003,
+        "delta_e76_p95": 12.31138427756572,
+        "delta_e76_max": 24.343500474862573,
+        "rgb_mae_8bit": 8.718211019661636,
+        "rgb_rmse_8bit": 10.375130796714105,
+        "rgb_abs_error_p95_8bit": 19.000000000000018
+      },
+      "desktop_lut_vs_native_profile": {
+        "rgb_rmse": 0.009190195987662946,
+        "rgb_max_error": 0.1365962517294118,
+        "delta_e76_mean": 1.9013355343400977,
+        "delta_e76_p95": 4.962422797543428,
+        "delta_e76_max": 14.961866805887558,
+        "rgb_mae_8bit": 1.612938097750048,
+        "rgb_rmse_8bit": 2.3434999768540514,
+        "rgb_abs_error_p95_8bit": 3.988519485300007
+      },
+      "parametric_model_vs_native_preview": {
+        "rgb_rmse": 0.0038610962343877658,
+        "rgb_max_error": 0.06798936949825618,
+        "delta_e76_mean": 0.76299977542583,
+        "delta_e76_p95": 1.5190322608707154,
+        "delta_e76_max": 10.938006248286731,
+        "rgb_mae_8bit": 0.7551314768497738,
+        "rgb_rmse_8bit": 0.9845795397688802,
+        "rgb_abs_error_p95_8bit": 2.0073161891474447
+      },
+      "native_parser": {
+        "path": "profiles/G7E100.PF3",
+        "sha256": "15194b4c96461b9a958cde382498360f5e7e7876d8316e87de365f2e59edcb2a",
+        "create_ref_rc": 0,
+        "nonnull_ref": true,
+        "properties": [
+          {
+            "id": "0x114",
+            "size_rc": 0,
+            "kind": 9,
+            "size": 4,
+            "get_rc": 0,
+            "data_sha256": "1fa12ddcd1115032e8903f915254b2193a8734b17e9210d552108b7716ee529b",
+            "data_hex": "84000000"
+          },
+          {
+            "id": "0x115",
+            "size_rc": 0,
+            "kind": 102,
+            "size": 32,
+            "get_rc": 0,
+            "data_sha256": "586bb6ad1227ad587c83d5c16601b0e242931b3fe07ad8ed4f233236c58a9cae",
+            "data_hex": "0000000000000000000000000000000000000000000000000200000004000000"
+          },
+          {
+            "id": "0x40001002",
+            "size_rc": 0,
+            "kind": 2,
+            "size": 32,
+            "get_rc": 0,
+            "data_sha256": "b1d6a97382b4c760d61eaf97512df63d7e8e371fa43c070695c85292558d1a4d",
+            "data_hex": "47375820456b7461722031303000000000000000000000000000000000000000"
+          },
+          {
+            "id": "0x40001070",
+            "size_rc": 0,
+            "kind": 32,
+            "size": 215628,
+            "get_rc": 0,
+            "data_sha256": "60df82d143d7999aa73e4de4e34b2c781cb0896ada0ad791e4ac7d664f362ac6"
+          },
+          {
+            "id": "0x40001071",
+            "size_rc": 0,
+            "kind": 32,
+            "size": 215628,
+            "get_rc": 0,
+            "data_sha256": "60df82d143d7999aa73e4de4e34b2c781cb0896ada0ad791e4ac7d664f362ac6"
+          }
+        ],
+        "release_rc": 0
+      },
+      "dense_table_vs_desktop_cube": {
+        "method": "Every second sample of the released 65-cubed CUBE compared with the full33-cubed PF3 table after12-bit quantization",
+        "maximum_absolute_channel_error": 0.00012209934798534938,
+        "half_12bit_code_bound": 0.0001221001221001221,
+        "passed": true
+      }
+    },
+    {
+      "id": "pro400h",
+      "profile": "profiles/G7F400.PF3",
+      "profile_sha256": "bfccf7ec634adfda6ea348ab9cbd9c2b0d0f2bd0d1dcbe919b8c4315c3dc2c91",
+      "desktop_cube": "luts/pro400h.cube",
+      "desktop_cube_sha256": "0548567735881c20ded2d36c74ed9ad31389665e0a6bbe3b519d15b774e2a394",
+      "image": "examples/canon-native/pro400h.png",
+      "image_sha256": "87bcd8c8869722d090ae5a6d724590fa495d1ba3545e2ba9c28f3176e72aec04",
+      "all_native_operations_successful": true,
+      "second_third_pass_identical": true,
+      "native_change_from_identity": {
+        "rgb_rmse": 0.019238827921040817,
+        "rgb_max_error": 0.1254901960784314,
+        "delta_e76_mean": 2.805241630083618,
+        "delta_e76_p95": 5.072851066800614,
+        "delta_e76_max": 13.60900079276675,
+        "rgb_mae_8bit": 3.92093354671544,
+        "rgb_rmse_8bit": 4.905901119865408,
+        "rgb_abs_error_p95_8bit": 10.000000000000021
+      },
+      "desktop_lut_vs_native_profile": {
+        "rgb_rmse": 0.00672719754039899,
+        "rgb_max_error": 0.04401789778431371,
+        "delta_e76_mean": 1.3362065770188942,
+        "delta_e76_p95": 2.314754445413778,
+        "delta_e76_max": 5.5213640451206185,
+        "rgb_mae_8bit": 1.4434600642086262,
+        "rgb_rmse_8bit": 1.7154353728017424,
+        "rgb_abs_error_p95_8bit": 3.094625032999994
+      },
+      "parametric_model_vs_native_preview": {
+        "rgb_rmse": 0.00284099641159185,
+        "rgb_max_error": 0.03517733849932764,
+        "delta_e76_mean": 0.6151056829230788,
+        "delta_e76_p95": 1.2197044602345486,
+        "delta_e76_max": 5.024241660357226,
+        "rgb_mae_8bit": 0.5777590849950595,
+        "rgb_rmse_8bit": 0.7244540849559218,
+        "rgb_abs_error_p95_8bit": 1.41765400733192
+      },
+      "native_parser": {
+        "path": "profiles/G7F400.PF3",
+        "sha256": "bfccf7ec634adfda6ea348ab9cbd9c2b0d0f2bd0d1dcbe919b8c4315c3dc2c91",
+        "create_ref_rc": 0,
+        "nonnull_ref": true,
+        "properties": [
+          {
+            "id": "0x114",
+            "size_rc": 0,
+            "kind": 9,
+            "size": 4,
+            "get_rc": 0,
+            "data_sha256": "1fa12ddcd1115032e8903f915254b2193a8734b17e9210d552108b7716ee529b",
+            "data_hex": "84000000"
+          },
+          {
+            "id": "0x115",
+            "size_rc": 0,
+            "kind": 102,
+            "size": 32,
+            "get_rc": 0,
+            "data_sha256": "586bb6ad1227ad587c83d5c16601b0e242931b3fe07ad8ed4f233236c58a9cae",
+            "data_hex": "0000000000000000000000000000000000000000000000000200000004000000"
+          },
+          {
+            "id": "0x40001002",
+            "size_rc": 0,
+            "kind": 2,
+            "size": 32,
+            "get_rc": 0,
+            "data_sha256": "e2d919da275aca60339bc15ef86131a25f9ed5c6700bccf4996f55177d5714c9",
+            "data_hex": "4737582050726f20343030480000000000000000000000000000000000000000"
+          },
+          {
+            "id": "0x40001070",
+            "size_rc": 0,
+            "kind": 32,
+            "size": 215628,
+            "get_rc": 0,
+            "data_sha256": "9550670556ea53532159124a806dd76b78b55fb41db74552d7553c229b7fa6f5"
+          },
+          {
+            "id": "0x40001071",
+            "size_rc": 0,
+            "kind": 32,
+            "size": 215628,
+            "get_rc": 0,
+            "data_sha256": "9550670556ea53532159124a806dd76b78b55fb41db74552d7553c229b7fa6f5"
+          }
+        ],
+        "release_rc": 0
+      },
+      "dense_table_vs_desktop_cube": {
+        "method": "Every second sample of the released 65-cubed CUBE compared with the full33-cubed PF3 table after12-bit quantization",
+        "maximum_absolute_channel_error": 0.00012209987667882727,
+        "half_12bit_code_bound": 0.0001221001221001221,
+        "passed": true
+      }
+    },
+    {
+      "id": "trix400",
+      "profile": "profiles/G7TX400.PF3",
+      "profile_sha256": "f2aced9e09aa0724880985a67ca9feecbadaed7c2c041686769d7609a2fdf810",
+      "desktop_cube": "luts/trix400.cube",
+      "desktop_cube_sha256": "dd7992f18b125b6bdfc5c0b3455ece28f4e359d4da1f4365c26acd146cd9ff25",
+      "image": "examples/canon-native/trix400.png",
+      "image_sha256": "983fb173b654942acf5cf10ca80e3746ff1a1c162b8d8a43b6610292981d1f16",
+      "all_native_operations_successful": true,
+      "second_third_pass_identical": true,
+      "native_change_from_identity": {
+        "rgb_rmse": 0.09565703101799267,
+        "rgb_max_error": 0.4235294117647059,
+        "delta_e76_mean": 15.989408397230834,
+        "delta_e76_p95": 33.394899694952436,
+        "delta_e76_max": 71.77018307030568,
+        "rgb_mae_8bit": 18.05046296296296,
+        "rgb_rmse_8bit": 24.39254290958813,
+        "rgb_abs_error_p95_8bit": 59.000000000000014
+      },
+      "desktop_lut_vs_native_profile": {
+        "rgb_rmse": 0.005066680757917754,
+        "rgb_max_error": 0.049834262031372534,
+        "delta_e76_mean": 0.3958269227984366,
+        "delta_e76_p95": 1.2140588551307991,
+        "delta_e76_max": 6.010122168536531,
+        "rgb_mae_8bit": 0.9089230425990223,
+        "rgb_rmse_8bit": 1.2920035932690273,
+        "rgb_abs_error_p95_8bit": 2.7841665999999936
+      },
+      "parametric_model_vs_native_preview": {
+        "rgb_rmse": 0.003171906681646339,
+        "rgb_max_error": 0.057901497233280586,
+        "delta_e76_mean": 0.28557471921160427,
+        "delta_e76_p95": 0.7070190218740819,
+        "delta_e76_max": 6.360905270116841,
+        "rgb_mae_8bit": 0.6447094724096858,
+        "rgb_rmse_8bit": 0.8088362038198165,
+        "rgb_abs_error_p95_8bit": 1.5306904436121336
+      },
+      "native_parser": {
+        "path": "profiles/G7TX400.PF3",
+        "sha256": "f2aced9e09aa0724880985a67ca9feecbadaed7c2c041686769d7609a2fdf810",
+        "create_ref_rc": 0,
+        "nonnull_ref": true,
+        "properties": [
+          {
+            "id": "0x114",
+            "size_rc": 0,
+            "kind": 9,
+            "size": 4,
+            "get_rc": 0,
+            "data_sha256": "1fa12ddcd1115032e8903f915254b2193a8734b17e9210d552108b7716ee529b",
+            "data_hex": "84000000"
+          },
+          {
+            "id": "0x115",
+            "size_rc": 0,
+            "kind": 102,
+            "size": 32,
+            "get_rc": 0,
+            "data_sha256": "586bb6ad1227ad587c83d5c16601b0e242931b3fe07ad8ed4f233236c58a9cae",
+            "data_hex": "0000000000000000000000000000000000000000000000000200000004000000"
+          },
+          {
+            "id": "0x40001002",
+            "size_rc": 0,
+            "kind": 2,
+            "size": 32,
+            "get_rc": 0,
+            "data_sha256": "84b44337c1526d47f1a6e179e5f205970944d82de64bdc2880b5dbe66b0fb820",
+            "data_hex": "473758205472692d582034303000000000000000000000000000000000000000"
+          },
+          {
+            "id": "0x40001070",
+            "size_rc": 0,
+            "kind": 32,
+            "size": 215628,
+            "get_rc": 0,
+            "data_sha256": "1b5ca4060dbfe09a9ad3e08917c86df2c0eafdcaaec4cfb46be8059472070d51"
+          },
+          {
+            "id": "0x40001071",
+            "size_rc": 0,
+            "kind": 32,
+            "size": 215628,
+            "get_rc": 0,
+            "data_sha256": "1b5ca4060dbfe09a9ad3e08917c86df2c0eafdcaaec4cfb46be8059472070d51"
+          }
+        ],
+        "release_rc": 0
+      },
+      "dense_table_vs_desktop_cube": {
+        "method": "Every second sample of the released 65-cubed CUBE compared with the full33-cubed PF3 table after12-bit quantization",
+        "maximum_absolute_channel_error": 0.0001220999597070227,
+        "half_12bit_code_bound": 0.0001221001221001221,
+        "passed": true
+      }
+    }
+  ],
+  "limits": [
+    "No physical G7 X Mark III registration, camera-produced JPEG or camera firmware execution was tested.",
+    "One CC0 G7 X Mark III RAW scene provides software integration evidence, not broad portrait or film-stock validation.",
+    "Desktop CUBEs and PF3 dense camera tables sample the full authored look at different resolutions. Canon desktop RAW previews use a separate parametric approximation and can differ visibly.",
+    "No Canon executable, framework, installer or firmware is distributed."
+  ],
+  "camera_compiler_validation": {
+    "report": "research/canon-camera-compiler-validation.json",
+    "same_final_profile_hashes": true,
+    "all_five_full_dense_tables_compiled": true,
+    "all_compiler_color_data_tails_distinct": true,
+    "physical_camera_registration_tested": false
+  }
+}

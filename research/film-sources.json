@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "researched_utc": "2026-11-12T02:13:53.819011+00:00",
+  "scope": "Primary-source model/data/colour-space research; no camera or physical film measurements were made.",
+  "selected_reference": {
+    "repository": "https://github.com/DhaliwalX/fotufilm-engine",
+    "commit": "3a789c436716c902654f248166ebb4f580611146",
+    "code_license": "Apache-2.0",
+    "profile_license": "CC-BY-SA-4.0",
+    "license_paths": [
+      "LICENSE",
+      "LICENSING.md",
+      "NOTICE",
+      "THIRD_PARTY_NOTICES.md",
+      "licenses/FILM-PROFILES.txt",
+      "licenses/FILM-PROFILES.json",
+      "licenses/CC-BY-SA-4.0.txt"
+    ],
+    "spectral_grid_nm": {
+      "start": 380,
+      "end": 780,
+      "step": 5,
+      "count": 81
+    }
+  },
+  "profiles": [
+    {
+      "id": "portra400",
+      "display_name": "Kodak Portra 400",
+      "source_path": "Sources/FotufilmCore/Stocks/portra400.json",
+      "source_url": "https://github.com/DhaliwalX/fotufilm-engine/blob/3a789c436716c902654f248166ebb4f580611146/Sources/FotufilmCore/Stocks/portra400.json",
+      "size_bytes": 282078,
+      "sha256": "225384c891b077c3fcff5be4b9393f822afa955f091bf945f27c26bd194a51df",
+      "license": "CC-BY-SA-4.0",
+      "copyright": "Copyright 2026 MUAStudio Inc.",
+      "attribution_name": "Fotufilm",
+      "attribution_url": "https://fotufilm.com",
+      "manufacturer_publication": "E-4050",
+      "manufacturer_pdf": "https://business.kodakmoments.com/sites/default/files/files/products/e4050_portra_400.pdf",
+      "source_asset_provenance": "Fotufilm runtime film profile by MUAStudio Inc.; released under CC BY-SA 4.0. Sampled characteristic curves preserve digitized Kodak E-4050 density records with C1 interpolation. Above +1.6 log E the normal-development records follow a measured highlight response up to +2.6 log E, then approach D-max exponentially; the toe keeps the datasheet's monotonic extrapolation. Runtime rendering data only. See licenses/FILM-PROFILES.txt. Edge inscriptions and approximate physical placement follow the manufacturer references in edgePrinting.sources; see docs/print-frame-model.md. The DX edge barcode encodes the DX number cited in edgePrinting.dx.source.",
+      "is_monochrome": false,
+      "is_reversal": false,
+      "characteristic_sample_counts": [
+        490,
+        490,
+        490
+      ],
+      "spectral_kind": "separatedBase",
+      "spectral_samples_per_record": [
+        81,
+        81,
+        81
+      ],
+      "development_metadata": {
+        "agitation": "as the process specifies",
+        "developer": "C-41 colour developer",
+        "source": "KODAK FLEXICOLOR Chemicals Z-131 push times; Kodak C-41 push curves E-4040, E-4035, E-4029, E-116",
+        "sourcePage": 27,
+        "temperatureC": 37.8
+      },
+      "physical_camera_match_tested": false,
+      "physical_film_match_tested_by_this_project": false
+    },
+    {
+      "id": "gold200",
+      "display_name": "Kodak Gold 200",
+      "source_path": "Sources/FotufilmCore/Stocks/gold200.json",
+      "source_url": "https://github.com/DhaliwalX/fotufilm-engine/blob/3a789c436716c902654f248166ebb4f580611146/Sources/FotufilmCore/Stocks/gold200.json",
+      "size_bytes": 284350,
+      "sha256": "4b5280679fec4608ca48b1ab1c8f94ea02bf0c301c6b0004b65c3fb35aaceec0",
+      "license": "CC-BY-SA-4.0",
+      "copyright": "Copyright 2026 MUAStudio Inc.",
+      "attribution_name": "Fotufilm",
+      "attribution_url": "https://fotufilm.com",
+      "manufacturer_publication": "E-7022",
+      "manufacturer_pdf": "https://business.kodakmoments.com/sites/default/files/files/resources/E7022_Gold_200.pdf",
+      "source_asset_provenance": "Fotufilm runtime film profile by MUAStudio Inc.; released under CC BY-SA 4.0. Sampled characteristic curves preserve digitized Kodak E-7022 (2016) density records with C1 interpolation. The first and last 12 points of each record provide monotonic extrapolation outside the published range. Runtime rendering data only. See licenses/FILM-PROFILES.txt. Edge inscriptions and approximate physical placement follow the manufacturer documents and developed-film photographs in edgePrinting.sources; see docs/print-frame-model.md.",
+      "is_monochrome": false,
+      "is_reversal": false,
+      "characteristic_sample_counts": [
+        490,
+        490,
+        490
+      ],
+      "spectral_kind": "separatedBase",
+      "spectral_samples_per_record": [
+        81,
+        81,
+        81
+      ],
+      "development_metadata": {
+        "agitation": "as the process specifies",
+        "developer": "C-41 colour developer",
+        "source": "KODAK FLEXICOLOR Chemicals Z-131 push times; Kodak C-41 push curves E-4040, E-4035, E-4029, E-116",
+        "sourcePage": 27,
+        "temperatureC": 37.8
+      },
+      "physical_camera_match_tested": false,
+      "physical_film_match_tested_by_this_project": false
+    },
+    {
+      "id": "ektar100",
+      "display_name": "Kodak Ektar 100",
+      "source_path": "Sources/FotufilmCore/Stocks/ektar100.json",
+      "source_url": "https://github.com/DhaliwalX/fotufilm-engine/blob/3a789c436716c902654f248166ebb4f580611146/Sources/FotufilmCore/Stocks/ektar100.json",
+      "size_bytes": 283531,
+      "sha256": "255c4d4f8f6718b8e1b5cfc262bd70dbb0edda5016731f42bdc9b630af37ac02",
+      "license": "CC-BY-SA-4.0",
+      "copyright": "Copyright 2026 MUAStudio Inc.",
+      "attribution_name": "Fotufilm",
+      "attribution_url": "https://fotufilm.com",
+      "manufacturer_publication": "E-4046",
+      "manufacturer_pdf": "https://business.kodakmoments.com/sites/default/files/files/products/e4046_ektar_100.pdf",
+      "source_asset_provenance": "Fotufilm runtime film profile by MUAStudio Inc.; released under CC BY-SA 4.0. Sampled characteristic curves preserve digitized Kodak E-4046 density records with C1 interpolation. The first and last 12 points of each record provide monotonic extrapolation outside the published range. Runtime rendering data only. See licenses/FILM-PROFILES.txt. Edge inscriptions and approximate physical placement follow the manufacturer references in edgePrinting.sources; see docs/print-frame-model.md.",
+      "is_monochrome": false,
+      "is_reversal": false,
+      "characteristic_sample_counts": [
+        483,
+        490,
+        483
+      ],
+      "spectral_kind": "separatedBase",
+      "spectral_samples_per_record": [
+        81,
+        81,
+        81
+      ],
+      "development_metadata": {
+        "agitation": "as the process specifies",
+        "developer": "C-41 colour developer",
+        "source": "KODAK FLEXICOLOR Chemicals Z-131 push times; Kodak C-41 push curves E-4040, E-4035, E-4029, E-116",
+        "sourcePage": 27,
+        "temperatureC": 37.8
+      },
+      "physical_camera_match_tested": false,
+      "physical_film_match_tested_by_this_project": false
+    },
+    {
+      "id": "pro400h",
+      "display_name": "Fujifilm Pro 400H",
+      "source_path": "Sources/FotufilmCore/Stocks/pro400h.json",
+      "source_url": "https://github.com/DhaliwalX/fotufilm-engine/blob/3a789c436716c902654f248166ebb4f580611146/Sources/FotufilmCore/Stocks/pro400h.json",
+      "size_bytes": 109961,
+      "sha256": "ededca2a92792286ad1430e58371711cf75d143b8e53ac93e55bfd799eae3f62",
+      "license": "CC-BY-SA-4.0",
+      "copyright": "Copyright 2026 MUAStudio Inc.",
+      "attribution_name": "Fotufilm",
+      "attribution_url": "https://fotufilm.com",
+      "manufacturer_publication": "AF3-176E",
+      "manufacturer_pdf": "https://asset.fujifilm.com/www/us/files/2020-04/12ed29db8d4d8bb45563ecdd668b0894/films_pro-400h_datasheet_01.pdf",
+      "source_asset_provenance": "Fotufilm runtime film profile by MUAStudio Inc.; released under CC BY-SA 4.0. Sampled characteristic curves preserve digitized Fujifilm AF3-176E density records with C1 interpolation. The first and last 12 points of each record provide monotonic extrapolation outside the published range. Runtime rendering data only. See licenses/FILM-PROFILES.txt. Edge inscriptions and approximate physical placement follow the manufacturer documents and developed-film photographs in edgePrinting.sources; see docs/print-frame-model.md. The DX edge barcode encodes the DX number cited in edgePrinting.dx.source.",
+      "is_monochrome": false,
+      "is_reversal": false,
+      "characteristic_sample_counts": [
+        483,
+        483,
+        483
+      ],
+      "spectral_kind": "separatedBase",
+      "spectral_samples_per_record": [
+        81,
+        81,
+        81
+      ],
+      "development_metadata": {},
+      "physical_camera_match_tested": false,
+      "physical_film_match_tested_by_this_project": false
+    },
+    {
+      "id": "trix400",
+      "display_name": "Kodak Tri-X 400",
+      "source_path": "Sources/FotufilmCore/Stocks/trix400.json",
+      "source_url": "https://github.com/DhaliwalX/fotufilm-engine/blob/3a789c436716c902654f248166ebb4f580611146/Sources/FotufilmCore/Stocks/trix400.json",
+      "size_bytes": 420840,
+      "sha256": "9d83989cb617a545ca934dc6bb053da1b5ce23f2639218c297a757f499c3e9bf",
+      "license": "CC-BY-SA-4.0",
+      "copyright": "Copyright 2026 MUAStudio Inc.",
+      "attribution_name": "Fotufilm",
+      "attribution_url": "https://fotufilm.com",
+      "manufacturer_publication": "F-4017",
+      "manufacturer_pdf": "https://business.kodakmoments.com/sites/default/files/files/resources/triXf4017.pdf",
+      "source_asset_provenance": "Fotufilm runtime film profile by MUAStudio Inc.; released under CC BY-SA 4.0. Sampled characteristic curves preserve digitized Kodak F-4017 density records with C1 interpolation. The first and last 12 points of each record provide monotonic extrapolation outside the published range. Runtime rendering data only. See licenses/FILM-PROFILES.txt. Edge inscriptions and approximate physical placement follow the manufacturer references in edgePrinting.sources; see docs/print-frame-model.md.",
+      "is_monochrome": true,
+      "is_reversal": false,
+      "characteristic_sample_counts": [
+        963,
+        963,
+        963
+      ],
+      "spectral_kind": "samples",
+      "spectral_samples_per_record": [
+        81,
+        81,
+        81
+      ],
+      "development_metadata": {
+        "agitation": "large tank, agitation at 1-minute intervals",
+        "developer": "KODAK PROFESSIONAL D-76 Developer",
+        "source": "KODAK PROFESSIONAL TRI-X 320 and 400 Films F-4017",
+        "sourcePage": 8,
+        "temperatureC": 20
+      },
+      "physical_camera_match_tested": false,
+      "physical_film_match_tested_by_this_project": false
+    }
+  ],
+  "recommendations": {
+    "bake_must_be_pointwise": true,
+    "input": "sRGB-encoded RGB under explicitly recorded Canon base-style assumption",
+    "internal_reference_primaries": "scene-linear Rec.2020",
+    "reference_output": "linear Display P3, to be converted to delivery sRGB and encoded",
+    "fixed_media_options": [
+      "screen + graded-print at grade2",
+      "EnduraPremier reflection print viewedD50 with all spatial effects removed"
+    ],
+    "avoid": [
+      "AutoLevels",
+      "LabScan image metering",
+      "localTone",
+      "grain",
+      "halation",
+      "blurredHald charts",
+      "8bit dithered source table",
+      "automatic stock choice"
+    ],
+    "stock_scene_reference": "The five selected profiles use the runtime default 5500K reference illuminant; preserve stock-native or declare an explicit fixed scene lamp.",
+    "permutation_test": "Render identical color samples in different spatial arrangements and confirm equal per-color results."
+  },
+  "evidence_limits": [
+    "Profile curve counts and hashes were directly read from the pinned runtime JSON files; upstream SOURCE_ASSETS hashes matched.",
+    "Digitised characteristic/sensitivity information is grounded in published manufacturer sheets, but separate dye spectra, extrapolation, coupling and spatial construction also contain assumptions.",
+    "No paired physical-film/digital ColorChecker corpus or physical-film matching DeltaE report found in the inspected repository sources and documentation; digital ColorChecker-like tests are not such evidence.",
+    "G7XIII output cannot be matched exactly by decoding a processed JPEG sRGB transfer alone; the Canon rendition already contains sensor/base-tone processing and clipping.",
+    "TriX F4017 profile sourcePage8 differs from printed page12 D76 plots in the retrieved manufacturer PDF; conditions are the useful identity anchor.",
+    "TriX spectral curves in F4017 are from the earlier TriXPan5063 with a manufacturer applicability caveat.",
+    "Pro400H manufacturer describes a fourth color-sensitive layer, whereas the inspected JSON has three effective dye-forming records; do not claim fully measured layer chemistry.",
+    "A static LUT contains color/tone only, not spatial grain or halation."
+  ],
+  "alternative_reference": {
+    "repository": "https://github.com/andreavolpato/spektrafilm",
+    "commit": "3bb2c2d2801ff68b92019cf1dbcbb133d60832bc",
+    "code_license": "GPL-3.0",
+    "profile_and_direct_lut_license": "CC-BY-SA-4.0",
+    "author": "Andrea Volpato",
+    "profile_license_path": "SPEKTRAFILM_LICENSE.txt",
+    "readme_inconsistency": "README retains an older customLUTlicense sentence; full profile licence explicitly states CC-BY-SA4.0."
+  }
+}

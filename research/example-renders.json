@@ -1,0 +1,181 @@
+{
+  "method": "Tetrahedral interpolation of the exact released CUBE; no extra grading, grain, sharpening or per-image auto settings.",
+  "scope": "Desktop LUT previews; not physical film scans or camera JPEGs.",
+  "renders": [
+    {
+      "look": "portra400",
+      "source": "skin-portrait",
+      "lut_sha256": "066e0e607fa69cdc99bb21e03cf008b0f51392332f8f6c7181886281d499b471",
+      "output": "examples/rendered/portra400/skin-portrait.jpg",
+      "sha256": "ddacecaae8160c3297313ff7b613623160fb6a68c5b55a804a377533f0c9de8e"
+    },
+    {
+      "look": "portra400",
+      "source": "warm-coffee",
+      "lut_sha256": "066e0e607fa69cdc99bb21e03cf008b0f51392332f8f6c7181886281d499b471",
+      "output": "examples/rendered/portra400/warm-coffee.jpg",
+      "sha256": "4cc178a6b3ad0a7da1c888feaa9769ad6af88bd1492d247c4fae18356e5667fe"
+    },
+    {
+      "look": "portra400",
+      "source": "landscape-sky",
+      "lut_sha256": "066e0e607fa69cdc99bb21e03cf008b0f51392332f8f6c7181886281d499b471",
+      "output": "examples/rendered/portra400/landscape-sky.jpg",
+      "sha256": "3ded4ab6cf8d08bd5a7ac70e04e3bd0b98edd8ab74c18b9cca8971134a734f0e"
+    },
+    {
+      "look": "portra400",
+      "source": "night-city",
+      "lut_sha256": "066e0e607fa69cdc99bb21e03cf008b0f51392332f8f6c7181886281d499b471",
+      "output": "examples/rendered/portra400/night-city.jpg",
+      "sha256": "06385a1bf067ed73002d323f475a34bea42c8fd2858c36d02450af8e1b889357"
+    },
+    {
+      "look": "portra400",
+      "source": "g7x-iii-canon-neutral",
+      "lut_sha256": "066e0e607fa69cdc99bb21e03cf008b0f51392332f8f6c7181886281d499b471",
+      "output": "examples/rendered/portra400/g7x-iii-canon-neutral.jpg",
+      "sha256": "560c6d3b57b3c32275c42d17bafcc100556cc1f8cf37f72509019fa349b8e0d0"
+    },
+    {
+      "look": "gold200",
+      "source": "skin-portrait",
+      "lut_sha256": "119a946d4ff915005939619ac78924991589f99d94a9eed4b7497514f75120ab",
+      "output": "examples/rendered/gold200/skin-portrait.jpg",
+      "sha256": "4f86d95003e154860f50642bd17c8190588eba79789b4933118db2261cb9da5a"
+    },
+    {
+      "look": "gold200",
+      "source": "warm-coffee",
+      "lut_sha256": "119a946d4ff915005939619ac78924991589f99d94a9eed4b7497514f75120ab",
+      "output": "examples/rendered/gold200/warm-coffee.jpg",
+      "sha256": "cb5324fd805ccb003fca8fd7f1f2a4b3242e943f80f5baabeeb19ed9e7e6a6e9"
+    },
+    {
+      "look": "gold200",
+      "source": "landscape-sky",
+      "lut_sha256": "119a946d4ff915005939619ac78924991589f99d94a9eed4b7497514f75120ab",
+      "output": "examples/rendered/gold200/landscape-sky.jpg",
+      "sha256": "7fb87c002aeaca25be0a64a202c69337383cb17983145781cdb07d0e422ee303"
+    },
+    {
+      "look": "gold200",
+      "source": "night-city",
+      "lut_sha256": "119a946d4ff915005939619ac78924991589f99d94a9eed4b7497514f75120ab",
+      "output": "examples/rendered/gold200/night-city.jpg",
+      "sha256": "5cef43eff4f417b103e366efe179eb91e32bb60a36d8668a250047a755e72b0d"
+    },
+    {
+      "look": "gold200",
+      "source": "g7x-iii-canon-neutral",
+      "lut_sha256": "119a946d4ff915005939619ac78924991589f99d94a9eed4b7497514f75120ab",
+      "output": "examples/rendered/gold200/g7x-iii-canon-neutral.jpg",
+      "sha256": "9ebf8100e3266993474ccaf9fa2e40d68bb49f4214c1db6ffa3a3e44c5438a12"
+    },
+    {
+      "look": "ektar100",
+      "source": "skin-portrait",
+      "lut_sha256": "ce3d24118cacb663a7d25427e3eaedceaaa5a6cb27602680a154ad83e03dc650",
+      "output": "examples/rendered/ektar100/skin-portrait.jpg",
+      "sha256": "4151a0a1571e04fda1ef15d7d50c68adff8946f5bd3c00f537d295c41ff82a1d"
+    },
+    {
+      "look": "ektar100",
+      "source": "warm-coffee",
+      "lut_sha256": "ce3d24118cacb663a7d25427e3eaedceaaa5a6cb27602680a154ad83e03dc650",
+      "output": "examples/rendered/ektar100/warm-coffee.jpg",
+      "sha256": "a8d3ebdcf60e78e2264fb8b1c014efb5491809b05594ae9d1bd08853b43feda8"
+    },
+    {
+      "look": "ektar100",
+      "source": "landscape-sky",
+      "lut_sha256": "ce3d24118cacb663a7d25427e3eaedceaaa5a6cb27602680a154ad83e03dc650",
+      "output": "examples/rendered/ektar100/landscape-sky.jpg",
+      "sha256": "274ec328082e31e7365b07f156a91c582b47bd6b05e8c41b2de943de2e4fb2db"
+    },
+    {
+      "look": "ektar100",
+      "source": "night-city",
+      "lut_sha256": "ce3d24118cacb663a7d25427e3eaedceaaa5a6cb27602680a154ad83e03dc650",
+      "output": "examples/rendered/ektar100/night-city.jpg",
+      "sha256": "eb866991cbc260234178339d0cf4e2d29d110f69f48a42a65c2e77cff77501fa"
+    },
+    {
+      "look": "ektar100",
+      "source": "g7x-iii-canon-neutral",
+      "lut_sha256": "ce3d24118cacb663a7d25427e3eaedceaaa5a6cb27602680a154ad83e03dc650",
+      "output": "examples/rendered/ektar100/g7x-iii-canon-neutral.jpg",
+      "sha256": "dcaa37e72e2e3c255d648b3f591767ec77296be9b615cc60f847193852d6f18f"
+    },
+    {
+      "look": "pro400h",
+      "source": "skin-portrait",
+      "lut_sha256": "0548567735881c20ded2d36c74ed9ad31389665e0a6bbe3b519d15b774e2a394",
+      "output": "examples/rendered/pro400h/skin-portrait.jpg",
+      "sha256": "44ce02ce4712728582b16fc3e0f96dbf89bb3b19f0f9f39f73323f958e84c363"
+    },
+    {
+      "look": "pro400h",
+      "source": "warm-coffee",
+      "lut_sha256": "0548567735881c20ded2d36c74ed9ad31389665e0a6bbe3b519d15b774e2a394",
+      "output": "examples/rendered/pro400h/warm-coffee.jpg",
+      "sha256": "4b3ad228fc645d36287f407987cd4bf913faf9d91b727f989d491098c852ac7d"
+    },
+    {
+      "look": "pro400h",
+      "source": "landscape-sky",
+      "lut_sha256": "0548567735881c20ded2d36c74ed9ad31389665e0a6bbe3b519d15b774e2a394",
+      "output": "examples/rendered/pro400h/landscape-sky.jpg",
+      "sha256": "a35c1ea9960f4a6f18b79e3546ccb20640bbd6ebfa4dca708815e67cf4519ce6"
+    },
+    {
+      "look": "pro400h",
+      "source": "night-city",
+      "lut_sha256": "0548567735881c20ded2d36c74ed9ad31389665e0a6bbe3b519d15b774e2a394",
+      "output": "examples/rendered/pro400h/night-city.jpg",
+      "sha256": "335fbe8acb16f8c33100589635018ac8a69c6f6d2ee23d6e4236432c1b87d528"
+    },
+    {
+      "look": "pro400h",
+      "source": "g7x-iii-canon-neutral",
+      "lut_sha256": "0548567735881c20ded2d36c74ed9ad31389665e0a6bbe3b519d15b774e2a394",
+      "output": "examples/rendered/pro400h/g7x-iii-canon-neutral.jpg",
+      "sha256": "b2eca345c2eb1d67fa5cd88702ab03f8e63738e02dbaf83ef46c23434c508492"
+    },
+    {
+      "look": "trix400",
+      "source": "skin-portrait",
+      "lut_sha256": "dd7992f18b125b6bdfc5c0b3455ece28f4e359d4da1f4365c26acd146cd9ff25",
+      "output": "examples/rendered/trix400/skin-portrait.jpg",
+      "sha256": "4d8cfd65fb8b3ff1f4cfd6fcd54b41bccac3df961b885d6757ad2344e0871016"
+    },
+    {
+      "look": "trix400",
+      "source": "warm-coffee",
+      "lut_sha256": "dd7992f18b125b6bdfc5c0b3455ece28f4e359d4da1f4365c26acd146cd9ff25",
+      "output": "examples/rendered/trix400/warm-coffee.jpg",
+      "sha256": "d155ec047cd11adebe2ee85858962348f4803aea05daadd78f6e845e1802db8d"
+    },
+    {
+      "look": "trix400",
+      "source": "landscape-sky",
+      "lut_sha256": "dd7992f18b125b6bdfc5c0b3455ece28f4e359d4da1f4365c26acd146cd9ff25",
+      "output": "examples/rendered/trix400/landscape-sky.jpg",
+      "sha256": "a2d3a3d4161086f1258481971ea9cc0141fa18bb7cedd531a74c5e478ebb8646"
+    },
+    {
+      "look": "trix400",
+      "source": "night-city",
+      "lut_sha256": "dd7992f18b125b6bdfc5c0b3455ece28f4e359d4da1f4365c26acd146cd9ff25",
+      "output": "examples/rendered/trix400/night-city.jpg",
+      "sha256": "9f59eea25e1fa6db36a6db17d200d1a545bafb68df1181c74553fdfb5c09e5a8"
+    },
+    {
+      "look": "trix400",
+      "source": "g7x-iii-canon-neutral",
+      "lut_sha256": "dd7992f18b125b6bdfc5c0b3455ece28f4e359d4da1f4365c26acd146cd9ff25",
+      "output": "examples/rendered/trix400/g7x-iii-canon-neutral.jpg",
+      "sha256": "180818a36b0e32ca4b189be2263404a6c61a3a1925702502c5780e9926184cfb"
+    }
+  ]
+}

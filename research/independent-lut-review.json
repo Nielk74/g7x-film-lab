@@ -1,0 +1,2088 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-11-12T02:38:12.924241+00:00",
+  "scope": "Independent numerical and visual review of five 65x65x65 display-sRGB CUBE LUTs. Native PF3 interpretation, camera registration/output, physical film accuracy and source-engine correctness are not established by this review.",
+  "method": {
+    "cube_parser": "Independent reader, red-fastest CUBE traversal verified by grid-node interpolation.",
+    "interpolation": "Independent tetrahedral barycentric implementation.",
+    "neutral_ramp_samples": 8193,
+    "random_sample_count": 30000,
+    "random_seed": 514007,
+    "neutral_cast_space": "CIELAB D65 computed from encoded sRGB; C*ab is diagnostic neutral cast, not error against physical film.",
+    "pairwise_metric": "CIE76 distance between different LUT outputs; measures separation, not accuracy against film.",
+    "grid_clipping_threshold": {
+      "low": 1e-09,
+      "high": 0.9999999
+    },
+    "photo_metrics": "Images reduced to at most 640 pixels with Lanczos; encoded sRGB retained. Counts are diagnostics of these supplied images, not representative population estimates.",
+    "numerical_acceptance_criteria": {
+      "finite_domain": "All delivered nodes finite and within [0,1].",
+      "gray_highlights": "Strictly positive mean response derivative over input [0.9,1]; no repeated terminal intervals.",
+      "shaper": "Strictly increasing internal coordinate, wholly inside declared internal model domain.",
+      "neutral_cast": "Residual channel spread below 0.00011 on 8193 sampled neutral points.",
+      "monochrome_tolerance": "Tri-X maximum RGB channel spread less than 1e-6 over all delivered nodes.",
+      "hash": "SHA-256 equals the current reviewed bake manifest.",
+      "interpolation": "Identity interpolation within 1e-14; 1000 exact grid-node samples within 1e-12."
+    },
+    "neutral_cast_threshold_note": "The residual-channel threshold is a numerical check on the declared balanced-positive rendition, not a physical film accuracy criterion."
+  },
+  "looks": [
+    {
+      "id": "portra400",
+      "cube": "luts/portra400.cube",
+      "cube_sha256": "066e0e607fa69cdc99bb21e03cf008b0f51392332f8f6c7181886281d499b471",
+      "manifest_hash_matches": true,
+      "cube_size": 65,
+      "finite_and_in_range": true,
+      "output_min_rgb": [
+        0.013406378,
+        0.019383903,
+        0.011487194
+      ],
+      "output_max_rgb": [
+        0.982645305,
+        0.972074863,
+        0.984493928
+      ],
+      "neutral": {
+        "black_rgb": [
+          0.035000176,
+          0.034999708,
+          0.034999914
+        ],
+        "white_rgb": [
+          0.960000005,
+          0.95999998,
+          0.95999995
+        ],
+        "black_mean": 0.03499993266666667,
+        "white_mean": 0.9599999783333333,
+        "minimum_mean_slope": 0.6671894399999019,
+        "minimum_encoded_luma_slope": 0.6671721863679068,
+        "last_ten_percent_minimum_mean_slope": 0.7632204586652733,
+        "last_ten_percent_flat_or_reversed_intervals": 0,
+        "all_flat_or_reversed_intervals": 0,
+        "max_channel_spread": 5.9472000000004854e-05,
+        "lab_chroma_ab": {
+          "min": 8.540021347474824e-07,
+          "median": 5.4102129311375374e-05,
+          "p95": 0.0015123267169722778,
+          "max": 0.00672603808917628
+        },
+        "white_lab": [
+          96.46797198137786,
+          -1.5394259922363318e-05,
+          1.0879240286421066e-05
+        ],
+        "channel_reversed_interval_counts": [
+          0,
+          0,
+          0
+        ],
+        "max_abs_mean_error_to_target": 0.0005242906439457129
+      },
+      "shaper": {
+        "public_input_domain": [
+          0,
+          1
+        ],
+        "model_exposure_domain": [
+          0,
+          2
+        ],
+        "input_axis_endpoints": [
+          0.0,
+          1.0
+        ],
+        "internal_coordinate_endpoints": [
+          0.19100787439867722,
+          1.3208348581815081
+        ],
+        "strictly_increasing_internal_coordinate": true,
+        "internal_coordinate_inside_model_domain": true,
+        "target_endpoints": [
+          0.035,
+          0.96
+        ],
+        "identity_share": 0.72
+      },
+      "grid_clipping": {
+        "low_fraction_per_channel": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "high_fraction_per_channel": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "any_channel_low_fraction": 0.0,
+        "any_channel_high_fraction": 0.0
+      },
+      "achromatic_max_rgb_spread": 0.836791894,
+      "grid_node_interpolation_max_error": 0.0,
+      "sample_order_invariance": true,
+      "photo_diagnostics": [
+        {
+          "source_id": "skin-portrait",
+          "evaluation_dimensions": [
+            576,
+            640
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.004923502604166667,
+          "input_effective_8bit_any_channel_white_fraction": 0.00015190972222222222,
+          "output_encoded_luma_percentiles": [
+            0.034999822369999996,
+            0.05595054608393725,
+            0.4382602587416658,
+            0.8367040832315227,
+            0.9599999831489998
+          ]
+        },
+        {
+          "source_id": "warm-coffee",
+          "evaluation_dimensions": [
+            600,
+            400
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.022225,
+          "input_effective_8bit_any_channel_white_fraction": 0.003725,
+          "output_encoded_luma_percentiles": [
+            0.03594578513786196,
+            0.05511491700412077,
+            0.4028487261226549,
+            0.914261856675068,
+            0.9599999831489998
+          ]
+        },
+        {
+          "source_id": "landscape-sky",
+          "evaluation_dimensions": [
+            640,
+            425
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.0014375,
+          "input_effective_8bit_any_channel_white_fraction": 0.00038970588235294116,
+          "output_encoded_luma_percentiles": [
+            0.034999822369999996,
+            0.07650266018626195,
+            0.5668001128702231,
+            0.9044571721003553,
+            0.9531489557135513
+          ]
+        },
+        {
+          "source_id": "night-city",
+          "evaluation_dimensions": [
+            640,
+            360
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.0006423611111111111,
+          "input_effective_8bit_any_channel_white_fraction": 0.007118055555555555,
+          "output_encoded_luma_percentiles": [
+            0.034999822369999996,
+            0.06802342775940902,
+            0.12476321775421961,
+            0.9315720479159612,
+            0.9599999831489998
+          ]
+        },
+        {
+          "source_id": "g7x-iii-canon-neutral",
+          "evaluation_dimensions": [
+            640,
+            427
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.0,
+          "input_effective_8bit_any_channel_white_fraction": 0.0,
+          "output_encoded_luma_percentiles": [
+            0.0535055188488298,
+            0.15767335372099192,
+            0.6020148350741801,
+            0.8097696254209295,
+            0.934937959428163
+          ]
+        }
+      ],
+      "visual_assessment": {
+        "result": "accept",
+        "summary": "Useful skin and fabric gradation, balanced neutrals and a gently richer warm rendition. The coffee and landscape preserve colour transitions after gamut compression.",
+        "revision_recommended": false,
+        "observations": [
+          "Warmer and more colourful than the original JPEG in these examples, while gentler than Gold/Ektar.",
+          "Only one portrait complexion and lighting case is available."
+        ]
+      }
+    },
+    {
+      "id": "gold200",
+      "cube": "luts/gold200.cube",
+      "cube_sha256": "119a946d4ff915005939619ac78924991589f99d94a9eed4b7497514f75120ab",
+      "manifest_hash_matches": true,
+      "cube_size": 65,
+      "finite_and_in_range": true,
+      "output_min_rgb": [
+        0.009185333,
+        0.009044523,
+        0.012081363
+      ],
+      "output_max_rgb": [
+        0.985302851,
+        0.967646083,
+        0.990085372
+      ],
+      "neutral": {
+        "black_rgb": [
+          0.024999968,
+          0.024999859,
+          0.025000158
+        ],
+        "white_rgb": [
+          0.960000028,
+          0.96000007,
+          0.959999957
+        ],
+        "black_mean": 0.024999994999999997,
+        "white_mean": 0.9600000183333334,
+        "minimum_mean_slope": 0.6078686506665463,
+        "minimum_encoded_luma_slope": 0.6078780070655512,
+        "last_ten_percent_minimum_mean_slope": 0.7441851306648459,
+        "last_ten_percent_flat_or_reversed_intervals": 0,
+        "all_flat_or_reversed_intervals": 0,
+        "max_channel_spread": 1.9529999999989833e-06,
+        "lab_chroma_ab": {
+          "min": 7.916195033134313e-07,
+          "median": 4.402541738508769e-05,
+          "p95": 0.00016647358233981874,
+          "max": 0.0002992553703912492
+        },
+        "white_lab": [
+          96.46797816526752,
+          -2.4790516361949955e-05,
+          1.9039206766713335e-05
+        ],
+        "channel_reversed_interval_counts": [
+          0,
+          0,
+          0
+        ],
+        "max_abs_mean_error_to_target": 0.0005233217133561174
+      },
+      "shaper": {
+        "public_input_domain": [
+          0,
+          1
+        ],
+        "model_exposure_domain": [
+          0,
+          2
+        ],
+        "input_axis_endpoints": [
+          0.0,
+          1.0
+        ],
+        "internal_coordinate_endpoints": [
+          0.16514991133382503,
+          1.4464257502480153
+        ],
+        "strictly_increasing_internal_coordinate": true,
+        "internal_coordinate_inside_model_domain": true,
+        "target_endpoints": [
+          0.025,
+          0.96
+        ],
+        "identity_share": 0.65
+      },
+      "grid_clipping": {
+        "low_fraction_per_channel": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "high_fraction_per_channel": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "any_channel_low_fraction": 0.0,
+        "any_channel_high_fraction": 0.0
+      },
+      "achromatic_max_rgb_spread": 0.859848792,
+      "grid_node_interpolation_max_error": 0.0,
+      "sample_order_invariance": true,
+      "photo_diagnostics": [
+        {
+          "source_id": "skin-portrait",
+          "evaluation_dimensions": [
+            576,
+            640
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.004923502604166667,
+          "input_effective_8bit_any_channel_white_fraction": 0.00015190972222222222,
+          "output_encoded_luma_percentiles": [
+            0.0249999037612,
+            0.04407960266477019,
+            0.43493396924365724,
+            0.8392421794999655,
+            0.9600000529121999
+          ]
+        },
+        {
+          "source_id": "warm-coffee",
+          "evaluation_dimensions": [
+            600,
+            400
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.022225,
+          "input_effective_8bit_any_channel_white_fraction": 0.003725,
+          "output_encoded_luma_percentiles": [
+            0.025946805146586666,
+            0.04146178706102039,
+            0.3713855732541631,
+            0.912633022048444,
+            0.9600000529121999
+          ]
+        },
+        {
+          "source_id": "landscape-sky",
+          "evaluation_dimensions": [
+            640,
+            425
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.0014375,
+          "input_effective_8bit_any_channel_white_fraction": 0.00038970588235294116,
+          "output_encoded_luma_percentiles": [
+            0.0249999037612,
+            0.06354521334857491,
+            0.5827784459109224,
+            0.9044728801032023,
+            0.9524233251366573
+          ]
+        },
+        {
+          "source_id": "night-city",
+          "evaluation_dimensions": [
+            640,
+            360
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.0006423611111111111,
+          "input_effective_8bit_any_channel_white_fraction": 0.007118055555555555,
+          "output_encoded_luma_percentiles": [
+            0.0249999037612,
+            0.05578035361857019,
+            0.10925471307602627,
+            0.929078969283325,
+            0.9600000529121999
+          ]
+        },
+        {
+          "source_id": "g7x-iii-canon-neutral",
+          "evaluation_dimensions": [
+            640,
+            427
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.0,
+          "input_effective_8bit_any_channel_white_fraction": 0.0,
+          "output_encoded_luma_percentiles": [
+            0.04232646636659843,
+            0.14061478899267138,
+            0.601649532285509,
+            0.8184219054824227,
+            0.9334950595562651
+          ]
+        }
+      ],
+      "visual_assessment": {
+        "result": "accept",
+        "summary": "A distinct, warmer and livelier colour option. Coffee reds and wood retain gradation rather than the earlier hard channel-floor clipping.",
+        "revision_recommended": false,
+        "observations": [
+          "Colour remains deliberately stronger than Portra/Pro 400H; no additional warming or saturation stage is recommended.",
+          "The previously flagged coffee effective 8-bit channel-black fraction has fallen from 22.575% to zero in the same reduced-input test."
+        ]
+      }
+    },
+    {
+      "id": "ektar100",
+      "cube": "luts/ektar100.cube",
+      "cube_sha256": "ce3d24118cacb663a7d25427e3eaedceaaa5a6cb27602680a154ad83e03dc650",
+      "manifest_hash_matches": true,
+      "cube_size": 65,
+      "finite_and_in_range": true,
+      "output_min_rgb": [
+        0.01298078,
+        0.002923668,
+        0.002526335
+      ],
+      "output_max_rgb": [
+        0.988205955,
+        0.983026125,
+        0.982635779
+      ],
+      "neutral": {
+        "black_rgb": [
+          0.019999877,
+          0.020000308,
+          0.020000172
+        ],
+        "white_rgb": [
+          0.96500004,
+          0.96500008,
+          0.964999921
+        ],
+        "black_mean": 0.020000119,
+        "white_mean": 0.9650000136666667,
+        "minimum_mean_slope": 0.49363451733324837,
+        "minimum_encoded_luma_slope": 0.49363493378552903,
+        "last_ten_percent_minimum_mean_slope": 0.6756363093318214,
+        "last_ten_percent_flat_or_reversed_intervals": 0,
+        "all_flat_or_reversed_intervals": 0,
+        "max_channel_spread": 0.000103903999999988,
+        "lab_chroma_ab": {
+          "min": 3.822167493811202e-07,
+          "median": 4.0777411638108094e-05,
+          "p95": 0.000660132068572992,
+          "max": 0.011659161972657688
+        },
+        "white_lab": [
+          96.9109844230147,
+          -2.6742824787984176e-05,
+          2.4734881653998286e-05
+        ],
+        "channel_reversed_interval_counts": [
+          0,
+          0,
+          0
+        ],
+        "max_abs_mean_error_to_target": 0.0005107911820940308
+      },
+      "shaper": {
+        "public_input_domain": [
+          0,
+          1
+        ],
+        "model_exposure_domain": [
+          0,
+          2
+        ],
+        "input_axis_endpoints": [
+          0.0,
+          1.0
+        ],
+        "internal_coordinate_endpoints": [
+          0.15795948385753267,
+          1.6105143184998303
+        ],
+        "strictly_increasing_internal_coordinate": true,
+        "internal_coordinate_inside_model_domain": true,
+        "target_endpoints": [
+          0.02,
+          0.965
+        ],
+        "identity_share": 0.52
+      },
+      "grid_clipping": {
+        "low_fraction_per_channel": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "high_fraction_per_channel": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "any_channel_low_fraction": 0.0,
+        "any_channel_high_fraction": 0.0
+      },
+      "achromatic_max_rgb_spread": 0.8623139630000001,
+      "grid_node_interpolation_max_error": 0.0,
+      "sample_order_invariance": true,
+      "photo_diagnostics": [
+        {
+          "source_id": "skin-portrait",
+          "evaluation_dimensions": [
+            576,
+            640
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.004923502604166667,
+          "input_effective_8bit_any_channel_white_fraction": 0.00015190972222222222,
+          "output_encoded_luma_percentiles": [
+            0.0200002065502,
+            0.03552353207134666,
+            0.4390209544447811,
+            0.8531707595378416,
+            0.9650000600162
+          ]
+        },
+        {
+          "source_id": "warm-coffee",
+          "evaluation_dimensions": [
+            600,
+            400
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.022225,
+          "input_effective_8bit_any_channel_white_fraction": 0.003725,
+          "output_encoded_luma_percentiles": [
+            0.02049037119082745,
+            0.03225963179949568,
+            0.36673970238410436,
+            0.9215977321352198,
+            0.9650000600162
+          ]
+        },
+        {
+          "source_id": "landscape-sky",
+          "evaluation_dimensions": [
+            640,
+            425
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.0014375,
+          "input_effective_8bit_any_channel_white_fraction": 0.00038970588235294116,
+          "output_encoded_luma_percentiles": [
+            0.0200002065502,
+            0.05226161913564784,
+            0.5899701924828942,
+            0.914327060835989,
+            0.9583573034879239
+          ]
+        },
+        {
+          "source_id": "night-city",
+          "evaluation_dimensions": [
+            640,
+            360
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.0006423611111111111,
+          "input_effective_8bit_any_channel_white_fraction": 0.007118055555555555,
+          "output_encoded_luma_percentiles": [
+            0.0200002065502,
+            0.04571044178801647,
+            0.0901910109263349,
+            0.9378699301407921,
+            0.9650000600162
+          ]
+        },
+        {
+          "source_id": "g7x-iii-canon-neutral",
+          "evaluation_dimensions": [
+            640,
+            427
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.0,
+          "input_effective_8bit_any_channel_white_fraction": 0.0,
+          "output_encoded_luma_percentiles": [
+            0.03425274064422039,
+            0.11921896185607607,
+            0.616146578632382,
+            0.8333052079548335,
+            0.9417728511477348
+          ]
+        }
+      ],
+      "visual_assessment": {
+        "result": "accept",
+        "summary": "The strongest vivid colour rendition, with distinct reds, foliage and blue/cyan skies. The earlier coffee and landscape channel-floor clipping is resolved.",
+        "revision_recommended": false,
+        "observations": [
+          "Still stronger in colour and tone than the other colour stocks, consistent with the intended vivid option.",
+          "Coffee effective 8-bit channel-black fraction has fallen from 29.823% to zero; landscape has fallen from 14.474% to zero in the same reduced-input test."
+        ]
+      }
+    },
+    {
+      "id": "pro400h",
+      "cube": "luts/pro400h.cube",
+      "cube_sha256": "0548567735881c20ded2d36c74ed9ad31389665e0a6bbe3b519d15b774e2a394",
+      "manifest_hash_matches": true,
+      "cube_size": 65,
+      "finite_and_in_range": true,
+      "output_min_rgb": [
+        0.038798336,
+        0.024079618,
+        0.009830719
+      ],
+      "output_max_rgb": [
+        0.966176201,
+        0.976649503,
+        0.996949482
+      ],
+      "neutral": {
+        "black_rgb": [
+          0.040000072,
+          0.039999959,
+          0.040000196
+        ],
+        "white_rgb": [
+          0.96000012,
+          0.96000012,
+          0.960000052
+        ],
+        "black_mean": 0.04000007566666667,
+        "white_mean": 0.9600000973333334,
+        "minimum_mean_slope": 0.7176042666665694,
+        "minimum_encoded_luma_slope": 0.7176149897214827,
+        "last_ten_percent_minimum_mean_slope": 0.7884508373317658,
+        "last_ten_percent_flat_or_reversed_intervals": 0,
+        "all_flat_or_reversed_intervals": 0,
+        "max_channel_spread": 2.076199999999362e-05,
+        "lab_chroma_ab": {
+          "min": 6.445336269321826e-07,
+          "median": 5.50908081471493e-05,
+          "p95": 0.0005251515857494839,
+          "max": 0.0027104178759623752
+        },
+        "white_lab": [
+          96.46798367720739,
+          -1.9216379598674393e-05,
+          1.4784179147575571e-05
+        ],
+        "channel_reversed_interval_counts": [
+          0,
+          0,
+          0
+        ],
+        "max_abs_mean_error_to_target": 0.0002952768742213452
+      },
+      "shaper": {
+        "public_input_domain": [
+          0,
+          1
+        ],
+        "model_exposure_domain": [
+          0,
+          2
+        ],
+        "input_axis_endpoints": [
+          0.0,
+          1.0
+        ],
+        "internal_coordinate_endpoints": [
+          0.192886766769689,
+          1.404714290756777
+        ],
+        "strictly_increasing_internal_coordinate": true,
+        "internal_coordinate_inside_model_domain": true,
+        "target_endpoints": [
+          0.04,
+          0.96
+        ],
+        "identity_share": 0.78
+      },
+      "grid_clipping": {
+        "low_fraction_per_channel": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "high_fraction_per_channel": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "any_channel_low_fraction": 0.0,
+        "any_channel_high_fraction": 0.0
+      },
+      "achromatic_max_rgb_spread": 0.8210007180000001,
+      "grid_node_interpolation_max_error": 0.0,
+      "sample_order_invariance": true,
+      "photo_diagnostics": [
+        {
+          "source_id": "skin-portrait",
+          "evaluation_dimensions": [
+            576,
+            640
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.004923502604166667,
+          "input_effective_8bit_any_channel_white_fraction": 0.00015190972222222222,
+          "output_encoded_luma_percentiles": [
+            0.0400000001352,
+            0.06258230079711545,
+            0.44001670083286987,
+            0.8329119603941676,
+            0.9600001150904001
+          ]
+        },
+        {
+          "source_id": "warm-coffee",
+          "evaluation_dimensions": [
+            600,
+            400
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.022225,
+          "input_effective_8bit_any_channel_white_fraction": 0.003725,
+          "output_encoded_luma_percentiles": [
+            0.040648881386889414,
+            0.05905685752419607,
+            0.411296886868622,
+            0.9113594927356933,
+            0.9600001150904001
+          ]
+        },
+        {
+          "source_id": "landscape-sky",
+          "evaluation_dimensions": [
+            640,
+            425
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.0014375,
+          "input_effective_8bit_any_channel_white_fraction": 0.00038970588235294116,
+          "output_encoded_luma_percentiles": [
+            0.0400000001352,
+            0.08441072700495372,
+            0.5621115396395695,
+            0.9021376102056282,
+            0.9524336143361616
+          ]
+        },
+        {
+          "source_id": "night-city",
+          "evaluation_dimensions": [
+            640,
+            360
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.0006423611111111111,
+          "input_effective_8bit_any_channel_white_fraction": 0.007118055555555555,
+          "output_encoded_luma_percentiles": [
+            0.0400000001352,
+            0.07553633485092469,
+            0.13609302800952783,
+            0.9311420518232811,
+            0.9600001150904001
+          ]
+        },
+        {
+          "source_id": "g7x-iii-canon-neutral",
+          "evaluation_dimensions": [
+            640,
+            427
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.0,
+          "input_effective_8bit_any_channel_white_fraction": 0.0,
+          "output_encoded_luma_percentiles": [
+            0.059927244126203136,
+            0.16991059754394933,
+            0.6013196694980251,
+            0.8071965493599623,
+            0.9363878339373058
+          ]
+        }
+      ],
+      "visual_assessment": {
+        "result": "accept",
+        "summary": "A calmer colour rendition with convincingly neutral fabric and whites. The earlier cool-shadow/warm-highlight crossover has been removed without collapsing its distinction from the other stocks.",
+        "revision_recommended": false,
+        "observations": [
+          "Maximum sampled neutral RGB spread is approximately 0.000020762, and maximum sampled neutral C*ab is below 0.003.",
+          "Neutral balance is the project's declared positive-timing choice, not a measured property of every physical Pro 400H scan."
+        ]
+      }
+    },
+    {
+      "id": "trix400",
+      "cube": "luts/trix400.cube",
+      "cube_sha256": "dd7992f18b125b6bdfc5c0b3455ece28f4e359d4da1f4365c26acd146cd9ff25",
+      "manifest_hash_matches": true,
+      "cube_size": 65,
+      "finite_and_in_range": true,
+      "output_min_rgb": [
+        0.01499995,
+        0.014999949,
+        0.01499995
+      ],
+      "output_max_rgb": [
+        0.959999979,
+        0.959999979,
+        0.960000098
+      ],
+      "neutral": {
+        "black_rgb": [
+          0.01499995,
+          0.014999949,
+          0.01499995
+        ],
+        "white_rgb": [
+          0.959999979,
+          0.959999979,
+          0.960000098
+        ],
+        "black_mean": 0.014999949666666667,
+        "white_mean": 0.9600000186666667,
+        "minimum_mean_slope": 0.37799289599996655,
+        "minimum_encoded_luma_slope": 0.3779929783039506,
+        "last_ten_percent_minimum_mean_slope": 0.5667292586658732,
+        "last_ten_percent_flat_or_reversed_intervals": 0,
+        "all_flat_or_reversed_intervals": 0,
+        "max_channel_spread": 1.1900000007614153e-07,
+        "lab_chroma_ab": {
+          "min": 3.6612074265376554e-07,
+          "median": 1.0993173387644777e-05,
+          "p95": 2.157470833977167e-05,
+          "max": 2.6471495605546556e-05
+        },
+        "white_lab": [
+          96.46797237471681,
+          -1.080911138373608e-05,
+          -8.097203219037397e-06
+        ],
+        "channel_reversed_interval_counts": [
+          0,
+          0,
+          0
+        ],
+        "max_abs_mean_error_to_target": 0.001355906338940449
+      },
+      "shaper": {
+        "public_input_domain": [
+          0,
+          1
+        ],
+        "model_exposure_domain": [
+          0,
+          2
+        ],
+        "input_axis_endpoints": [
+          0.0,
+          1.0
+        ],
+        "internal_coordinate_endpoints": [
+          0.15904106979469085,
+          1.1821207123457615
+        ],
+        "strictly_increasing_internal_coordinate": true,
+        "internal_coordinate_inside_model_domain": true,
+        "target_endpoints": [
+          0.015,
+          0.96
+        ],
+        "identity_share": 0.4
+      },
+      "grid_clipping": {
+        "low_fraction_per_channel": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "high_fraction_per_channel": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "any_channel_low_fraction": 0.0,
+        "any_channel_high_fraction": 0.0
+      },
+      "achromatic_max_rgb_spread": 2.3500000001508425e-07,
+      "grid_node_interpolation_max_error": 0.0,
+      "sample_order_invariance": true,
+      "photo_diagnostics": [
+        {
+          "source_id": "skin-portrait",
+          "evaluation_dimensions": [
+            576,
+            640
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.004923502604166667,
+          "input_effective_8bit_any_channel_white_fraction": 0.00015190972222222222,
+          "output_encoded_luma_percentiles": [
+            0.014999949284799998,
+            0.02610933732721326,
+            0.4143740250734518,
+            0.8679064624087874,
+            0.9599999875918
+          ]
+        },
+        {
+          "source_id": "warm-coffee",
+          "evaluation_dimensions": [
+            600,
+            400
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.022225,
+          "input_effective_8bit_any_channel_white_fraction": 0.003725,
+          "output_encoded_luma_percentiles": [
+            0.01574047177357176,
+            0.02085393316679294,
+            0.3296996631790807,
+            0.9159119241233991,
+            0.9599999875918
+          ]
+        },
+        {
+          "source_id": "landscape-sky",
+          "evaluation_dimensions": [
+            640,
+            425
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.0014375,
+          "input_effective_8bit_any_channel_white_fraction": 0.00038970588235294116,
+          "output_encoded_luma_percentiles": [
+            0.014999949284799998,
+            0.04007521000274432,
+            0.7265969113179827,
+            0.9120624395658563,
+            0.9498805776572862
+          ]
+        },
+        {
+          "source_id": "night-city",
+          "evaluation_dimensions": [
+            640,
+            360
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.0006423611111111111,
+          "input_effective_8bit_any_channel_white_fraction": 0.007118055555555555,
+          "output_encoded_luma_percentiles": [
+            0.014999949284799998,
+            0.03750729614339831,
+            0.07238783453289883,
+            0.9259306224756564,
+            0.9599999875918
+          ]
+        },
+        {
+          "source_id": "g7x-iii-canon-neutral",
+          "evaluation_dimensions": [
+            640,
+            427
+          ],
+          "exact_output_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_black_fraction": 0.0,
+          "effective_8bit_any_channel_white_fraction": 0.0,
+          "input_effective_8bit_any_channel_black_fraction": 0.0,
+          "input_effective_8bit_any_channel_white_fraction": 0.0,
+          "output_encoded_luma_percentiles": [
+            0.028415728807079217,
+            0.08625107967224518,
+            0.5914192579244847,
+            0.888721401397356,
+            0.9355179184559294
+          ]
+        }
+      ],
+      "visual_assessment": {
+        "result": "accept",
+        "summary": "A coherent monochrome rendition with preserved shadow, midtone and highlight gradation, and no visible residual tint.",
+        "revision_recommended": false,
+        "observations": [
+          "Maximum RGB spread over all delivered nodes is approximately 2.4e-7, far below an 8-bit or 12-bit code step.",
+          "The LUT contains tone and colour-to-brightness response; grain, adjacency and halation remain outside its scope."
+        ]
+      }
+    }
+  ],
+  "pairwise_separation": [
+    {
+      "look_a": "portra400",
+      "look_b": "gold200",
+      "uniform_rgb_cie76_difference": {
+        "min": 0.10819007626987033,
+        "median": 6.082326592051356,
+        "p95": 11.646445408060622,
+        "max": 18.43318061697442
+      },
+      "photographs": [
+        {
+          "source_id": "skin-portrait",
+          "cie76_difference": {
+            "min": 1.389658877032749e-05,
+            "median": 1.3544939128424582,
+            "p95": 6.3320788064001,
+            "max": 10.977640151765385
+          }
+        },
+        {
+          "source_id": "warm-coffee",
+          "cie76_difference": {
+            "min": 1.389658877032749e-05,
+            "median": 6.043723700089546,
+            "p95": 8.5616285760802,
+            "max": 10.468295405741246
+          }
+        },
+        {
+          "source_id": "landscape-sky",
+          "cie76_difference": {
+            "min": 0.005025712147534239,
+            "median": 3.835593388696107,
+            "p95": 8.255637433214996,
+            "max": 10.991176806095188
+          }
+        },
+        {
+          "source_id": "night-city",
+          "cie76_difference": {
+            "min": 1.389658877032749e-05,
+            "median": 2.0632866755466988,
+            "p95": 5.022648042472591,
+            "max": 14.198747924669906
+          }
+        },
+        {
+          "source_id": "g7x-iii-canon-neutral",
+          "cie76_difference": {
+            "min": 0.005025712147534239,
+            "median": 2.305866424322066,
+            "p95": 4.278194906181529,
+            "max": 9.133659302392342
+          }
+        }
+      ]
+    },
+    {
+      "look_a": "portra400",
+      "look_b": "ektar100",
+      "uniform_rgb_cie76_difference": {
+        "min": 0.11231615381054985,
+        "median": 5.326818348197858,
+        "p95": 14.38537072703678,
+        "max": 36.17248954007098
+      },
+      "photographs": [
+        {
+          "source_id": "skin-portrait",
+          "cie76_difference": {
+            "min": 0.0465078958663678,
+            "median": 2.174566229960657,
+            "p95": 14.05035160361645,
+            "max": 19.262829830880754
+          }
+        },
+        {
+          "source_id": "warm-coffee",
+          "cie76_difference": {
+            "min": 0.4430124419988699,
+            "median": 8.380877021942796,
+            "p95": 13.713204167452973,
+            "max": 16.74017642180731
+          }
+        },
+        {
+          "source_id": "landscape-sky",
+          "cie76_difference": {
+            "min": 0.13168577807291865,
+            "median": 5.6801381694595126,
+            "p95": 10.072651393628972,
+            "max": 15.718523744239072
+          }
+        },
+        {
+          "source_id": "night-city",
+          "cie76_difference": {
+            "min": 0.13947596718758687,
+            "median": 3.773109622751961,
+            "p95": 7.973213729184071,
+            "max": 37.68546070032273
+          }
+        },
+        {
+          "source_id": "g7x-iii-canon-neutral",
+          "cie76_difference": {
+            "min": 0.0465078958663678,
+            "median": 3.0275706337135393,
+            "p95": 7.052223119681562,
+            "max": 16.589275463976062
+          }
+        }
+      ]
+    },
+    {
+      "look_a": "portra400",
+      "look_b": "pro400h",
+      "uniform_rgb_cie76_difference": {
+        "min": 0.16258281356568274,
+        "median": 6.731471787330422,
+        "p95": 19.181199961736443,
+        "max": 34.64422910611486
+      },
+      "photographs": [
+        {
+          "source_id": "skin-portrait",
+          "cie76_difference": {
+            "min": 1.2909282500471125e-05,
+            "median": 1.3858345663549443,
+            "p95": 7.628939106528433,
+            "max": 18.262479556006816
+          }
+        },
+        {
+          "source_id": "warm-coffee",
+          "cie76_difference": {
+            "min": 1.2909282500471125e-05,
+            "median": 6.652937147797039,
+            "p95": 16.229609834231983,
+            "max": 27.043881741329372
+          }
+        },
+        {
+          "source_id": "landscape-sky",
+          "cie76_difference": {
+            "min": 0.052940624736531355,
+            "median": 3.025304473726763,
+            "p95": 8.246120985292658,
+            "max": 29.177803775978333
+          }
+        },
+        {
+          "source_id": "night-city",
+          "cie76_difference": {
+            "min": 1.2909282500471125e-05,
+            "median": 1.6194523785055992,
+            "p95": 8.8127467204217,
+            "max": 34.61846032849522
+          }
+        },
+        {
+          "source_id": "g7x-iii-canon-neutral",
+          "cie76_difference": {
+            "min": 0.00033637457668777833,
+            "median": 2.6867681777075423,
+            "p95": 9.034600479873943,
+            "max": 19.02727550101954
+          }
+        }
+      ]
+    },
+    {
+      "look_a": "portra400",
+      "look_b": "trix400",
+      "uniform_rgb_cie76_difference": {
+        "min": 1.1932306237018093,
+        "median": 60.47650941256566,
+        "p95": 93.43417594990855,
+        "max": 111.03556293326135
+      },
+      "photographs": [
+        {
+          "source_id": "skin-portrait",
+          "cie76_difference": {
+            "min": 1.952648741497826e-05,
+            "median": 6.847971479029075,
+            "p95": 38.173761054002966,
+            "max": 78.36607402640405
+          }
+        },
+        {
+          "source_id": "warm-coffee",
+          "cie76_difference": {
+            "min": 1.952648741497826e-05,
+            "median": 57.35500858163847,
+            "p95": 76.11496542880822,
+            "max": 80.52676510640681
+          }
+        },
+        {
+          "source_id": "landscape-sky",
+          "cie76_difference": {
+            "min": 0.4673226713857875,
+            "median": 28.481143719223034,
+            "p95": 54.47129708272523,
+            "max": 72.54131874084325
+          }
+        },
+        {
+          "source_id": "night-city",
+          "cie76_difference": {
+            "min": 1.952648741497826e-05,
+            "median": 9.031104029484988,
+            "p95": 40.98651596251048,
+            "max": 111.29401907876489
+          }
+        },
+        {
+          "source_id": "g7x-iii-canon-neutral",
+          "cie76_difference": {
+            "min": 0.0335693754469915,
+            "median": 16.59940869749955,
+            "p95": 34.0161048848424,
+            "max": 67.5446560196224
+          }
+        }
+      ]
+    },
+    {
+      "look_a": "gold200",
+      "look_b": "ektar100",
+      "uniform_rgb_cie76_difference": {
+        "min": 0.15312154164454256,
+        "median": 4.072999589995456,
+        "p95": 9.664404576014398,
+        "max": 27.153848499174416
+      },
+      "photographs": [
+        {
+          "source_id": "skin-portrait",
+          "cie76_difference": {
+            "min": 0.014180216439645295,
+            "median": 1.6745227317781148,
+            "p95": 7.996005053255517,
+            "max": 15.013093500739785
+          }
+        },
+        {
+          "source_id": "warm-coffee",
+          "cie76_difference": {
+            "min": 0.3887753309668909,
+            "median": 3.874746772129971,
+            "p95": 6.735024761866923,
+            "max": 9.114909630320671
+          }
+        },
+        {
+          "source_id": "landscape-sky",
+          "cie76_difference": {
+            "min": 0.32131254240507096,
+            "median": 2.7536555757455123,
+            "p95": 5.610347453331849,
+            "max": 8.876950338714709
+          }
+        },
+        {
+          "source_id": "night-city",
+          "cie76_difference": {
+            "min": 0.18123924806568026,
+            "median": 2.131909553571096,
+            "p95": 6.0863970653923705,
+            "max": 25.55313492814575
+          }
+        },
+        {
+          "source_id": "g7x-iii-canon-neutral",
+          "cie76_difference": {
+            "min": 0.014180216439645295,
+            "median": 2.5336195961276413,
+            "p95": 5.695341496192172,
+            "max": 9.175765550631166
+          }
+        }
+      ]
+    },
+    {
+      "look_a": "gold200",
+      "look_b": "pro400h",
+      "uniform_rgb_cie76_difference": {
+        "min": 0.23959960408066552,
+        "median": 8.081365240225153,
+        "p95": 19.763424757430464,
+        "max": 44.262105647309895
+      },
+      "photographs": [
+        {
+          "source_id": "skin-portrait",
+          "cie76_difference": {
+            "min": 8.919514657557897e-06,
+            "median": 2.1420295433497185,
+            "p95": 12.212857979116599,
+            "max": 17.723283026436576
+          }
+        },
+        {
+          "source_id": "warm-coffee",
+          "cie76_difference": {
+            "min": 8.919514657557897e-06,
+            "median": 10.086561338843927,
+            "p95": 17.395754893925265,
+            "max": 23.981966139062212
+          }
+        },
+        {
+          "source_id": "landscape-sky",
+          "cie76_difference": {
+            "min": 0.133298545139089,
+            "median": 4.26218592869941,
+            "p95": 8.218155301147164,
+            "max": 20.411822890184308
+          }
+        },
+        {
+          "source_id": "night-city",
+          "cie76_difference": {
+            "min": 8.919514657557897e-06,
+            "median": 3.1180664360148977,
+            "p95": 8.423284422760899,
+            "max": 45.41600437032977
+          }
+        },
+        {
+          "source_id": "g7x-iii-canon-neutral",
+          "cie76_difference": {
+            "min": 0.009457161890872545,
+            "median": 3.492364543728377,
+            "p95": 8.343960797666599,
+            "max": 16.980211728858986
+          }
+        }
+      ]
+    },
+    {
+      "look_a": "gold200",
+      "look_b": "trix400",
+      "uniform_rgb_cie76_difference": {
+        "min": 1.063201845886456,
+        "median": 58.99156709163711,
+        "p95": 88.53254244980855,
+        "max": 99.55092657582092
+      },
+      "photographs": [
+        {
+          "source_id": "skin-portrait",
+          "cie76_difference": {
+            "min": 3.1070804780003806e-05,
+            "median": 6.297811096361418,
+            "p95": 42.79043164555883,
+            "max": 72.20021688650061
+          }
+        },
+        {
+          "source_id": "warm-coffee",
+          "cie76_difference": {
+            "min": 3.1070804780003806e-05,
+            "median": 61.68747269129561,
+            "p95": 81.70581274247323,
+            "max": 86.55895934049065
+          }
+        },
+        {
+          "source_id": "landscape-sky",
+          "cie76_difference": {
+            "min": 0.32239735795415436,
+            "median": 26.418146580164876,
+            "p95": 53.14062872087009,
+            "max": 78.58589259300228
+          }
+        },
+        {
+          "source_id": "night-city",
+          "cie76_difference": {
+            "min": 3.1070804780003806e-05,
+            "median": 7.568994224237079,
+            "p95": 39.92535677953976,
+            "max": 100.3612318783635
+          }
+        },
+        {
+          "source_id": "g7x-iii-canon-neutral",
+          "cie76_difference": {
+            "min": 0.08386511799952093,
+            "median": 16.073870566692296,
+            "p95": 31.938602565290452,
+            "max": 64.2489942996409
+          }
+        }
+      ]
+    },
+    {
+      "look_a": "ektar100",
+      "look_b": "pro400h",
+      "uniform_rgb_cie76_difference": {
+        "min": 0.4471277660164597,
+        "median": 10.68027764035925,
+        "p95": 22.991490276059622,
+        "max": 70.26071114417046
+      },
+      "photographs": [
+        {
+          "source_id": "skin-portrait",
+          "cie76_difference": {
+            "min": 0.0015405962654119238,
+            "median": 3.3104344113220403,
+            "p95": 19.89590593656093,
+            "max": 31.246795602364518
+          }
+        },
+        {
+          "source_id": "warm-coffee",
+          "cie76_difference": {
+            "min": 0.4430007459830032,
+            "median": 14.610766701090332,
+            "p95": 20.578555589717038,
+            "max": 23.75510301056694
+          }
+        },
+        {
+          "source_id": "landscape-sky",
+          "cie76_difference": {
+            "min": 0.09875725173044013,
+            "median": 6.926466816565993,
+            "p95": 12.286950581505653,
+            "max": 24.234048883610104
+          }
+        },
+        {
+          "source_id": "night-city",
+          "cie76_difference": {
+            "min": 0.10225246463725392,
+            "median": 5.097726265916019,
+            "p95": 14.032683057743153,
+            "max": 70.62276332618326
+          }
+        },
+        {
+          "source_id": "g7x-iii-canon-neutral",
+          "cie76_difference": {
+            "min": 0.0015405962654119238,
+            "median": 5.740432710189821,
+            "p95": 13.81366253464121,
+            "max": 23.525079719240704
+          }
+        }
+      ]
+    },
+    {
+      "look_a": "ektar100",
+      "look_b": "trix400",
+      "uniform_rgb_cie76_difference": {
+        "min": 0.1787945110580475,
+        "median": 60.35575432733013,
+        "p95": 90.20792545910213,
+        "max": 102.00664473519909
+      },
+      "photographs": [
+        {
+          "source_id": "skin-portrait",
+          "cie76_difference": {
+            "min": 0.015202278263413024,
+            "median": 5.802122471159458,
+            "p95": 50.195819980586016,
+            "max": 75.90892943466964
+          }
+        },
+        {
+          "source_id": "warm-coffee",
+          "cie76_difference": {
+            "min": 0.09819847917857374,
+            "median": 65.50620014989727,
+            "p95": 85.6312193888726,
+            "max": 90.30547103443159
+          }
+        },
+        {
+          "source_id": "landscape-sky",
+          "cie76_difference": {
+            "min": 0.31361839127848196,
+            "median": 27.24916822841351,
+            "p95": 56.12287091464419,
+            "max": 80.287021153646
+          }
+        },
+        {
+          "source_id": "night-city",
+          "cie76_difference": {
+            "min": 0.31580590478558623,
+            "median": 6.621118832190425,
+            "p95": 44.9762357622282,
+            "max": 101.73153010587355
+          }
+        },
+        {
+          "source_id": "g7x-iii-canon-neutral",
+          "cie76_difference": {
+            "min": 0.055245991495420296,
+            "median": 17.624891280400025,
+            "p95": 37.21747329691689,
+            "max": 68.49687046124879
+          }
+        }
+      ]
+    },
+    {
+      "look_a": "pro400h",
+      "look_b": "trix400",
+      "uniform_rgb_cie76_difference": {
+        "min": 1.194702642708539,
+        "median": 53.312301587456176,
+        "p95": 91.6223700161183,
+        "max": 118.50190086089978
+      },
+      "photographs": [
+        {
+          "source_id": "skin-portrait",
+          "cie76_difference": {
+            "min": 2.68697992380586e-05,
+            "median": 6.033365183008941,
+            "p95": 31.860503443836507,
+            "max": 76.24874634736497
+          }
+        },
+        {
+          "source_id": "warm-coffee",
+          "cie76_difference": {
+            "min": 2.68697992380586e-05,
+            "median": 47.03118241118342,
+            "p95": 73.77836910409151,
+            "max": 78.42780332999779
+          }
+        },
+        {
+          "source_id": "landscape-sky",
+          "cie76_difference": {
+            "min": 0.4323865071691642,
+            "median": 25.911228964582694,
+            "p95": 48.02415218887183,
+            "max": 66.93522281340564
+          }
+        },
+        {
+          "source_id": "night-city",
+          "cie76_difference": {
+            "min": 2.68697992380586e-05,
+            "median": 9.275984251914103,
+            "p95": 32.51829380138773,
+            "max": 119.65427877082004
+          }
+        },
+        {
+          "source_id": "g7x-iii-canon-neutral",
+          "cie76_difference": {
+            "min": 0.06250003497521375,
+            "median": 13.140952976831635,
+            "p95": 30.317577143187656,
+            "max": 57.23636669002338
+          }
+        }
+      ]
+    }
+  ],
+  "visual_review": {
+    "input_source_manifest": "research/example-sources.json",
+    "images_reviewed": [
+      "skin-portrait",
+      "warm-coffee",
+      "landscape-sky",
+      "night-city",
+      "g7x-iii-canon-neutral"
+    ],
+    "comparison": "Identical inputs through independent tetrahedral interpolation, reviewed as all-scenes and larger camera-landscape sheets. Published Portra and overview sheets were also inspected.",
+    "colour_stock_separation": "All six pairs among the four colour looks remain numerically distinct. Uniform-RGB median CIE76 output differences range from 4.073 (Gold/Ektar) to 10.680 (Ektar/Pro400H); photographic medians vary with scene. These are between-look differences, not accuracy scores.",
+    "clipping": "No delivered grid node reaches the reviewed exact low/high clipping thresholds. No sampled supplied-photo output reaches an effective 8-bit channel black or white in the reduced-input tests. This describes these floating-point LUT applications; JPEG encoding can add small code changes.",
+    "remaining_revision_flags": [],
+    "physical_reference_policy": "Earlier primary-source Kodak/Fujifilm material descriptions supplied qualitative context. No brochure image or film scan was used as pixel ground truth.",
+    "released_comparisons": [
+      "previews/overview.jpg",
+      "previews/portra400.jpg",
+      "examples/rendered/"
+    ]
+  },
+  "limitations": [
+    "No physical G7 X III/film chart pair, scanner calibration or measured-film accuracy score is available.",
+    "The CUBE hashes identify exactly the assets reviewed. Re-baked assets require a new review.",
+    "This review does not compare held-out points against a newly evaluated source engine; it verifies the delivered tables, shaper receipts and their application to supplied photographs. Source-model holdout checks are separate.",
+    "Order invariance here checks only delivered pointwise LUT application. It does not independently prove that the original engine bake excluded all spatial effects.",
+    "Neutral-ramp positivity does not establish perceptual smoothness of every possible hue trajectory.",
+    "Photo statistics use reduced, already processed digital images and are not a camera population study.",
+    "A single supplied portrait does not establish accuracy across complexions or illuminants.",
+    "Native Canon software renders and PF3 fitting have separate evidence in research/canon-native-validation.json. No camera installation or out-of-camera JPEG was tested in this review."
+  ],
+  "overall_result": {
+    "numerical_contract": "pass",
+    "aesthetic_review": "accept_for_film_inspired_display_pack",
+    "finishing_revision_flags_resolved": true,
+    "film_accuracy": "unmeasured",
+    "camera_acceptance": "outside_this_review",
+    "summary": "The final five CUBEs are finite, bounded, hash-matched and free of neutral highlight plateaus. Neutral crossover and severe channel-floor clipping from the earlier revision are resolved. The four colour renditions remain distinct, and Tri-X is effectively achromatic. Supplied photos are visually plausible as film-inspired looks; this is not a measured film/scanner match."
+  },
+  "finishing_revision_comparison": [
+    {
+      "id": "portra400",
+      "previous_cube_sha256": "60e7aea4dd214e567e2622fbd68cb30e9374268e1fa2a9255c1173b9ee776d6f",
+      "current_cube_sha256": "066e0e607fa69cdc99bb21e03cf008b0f51392332f8f6c7181886281d499b471",
+      "neutral_max_chroma_ab_before": 1.2470744637981503,
+      "neutral_max_chroma_ab_after": 0.00672603808917628,
+      "coffee_effective_8bit_any_channel_black_fraction_before": 0.015841666666666667,
+      "coffee_effective_8bit_any_channel_black_fraction_after": 0.0,
+      "landscape_effective_8bit_any_channel_black_fraction_before": 0.07920955882352941,
+      "landscape_effective_8bit_any_channel_black_fraction_after": 0.0,
+      "status": "resolved_or_no_regression"
+    },
+    {
+      "id": "gold200",
+      "previous_cube_sha256": "b328ba37680745992b27974e6ef4262a4a809473a492e531f6f4b67cff3294ec",
+      "current_cube_sha256": "119a946d4ff915005939619ac78924991589f99d94a9eed4b7497514f75120ab",
+      "neutral_max_chroma_ab_before": 3.8608320120081183,
+      "neutral_max_chroma_ab_after": 0.0002992553703912492,
+      "coffee_effective_8bit_any_channel_black_fraction_before": 0.22575416666666667,
+      "coffee_effective_8bit_any_channel_black_fraction_after": 0.0,
+      "landscape_effective_8bit_any_channel_black_fraction_before": 0.055518382352941174,
+      "landscape_effective_8bit_any_channel_black_fraction_after": 0.0,
+      "status": "resolved_or_no_regression"
+    },
+    {
+      "id": "ektar100",
+      "previous_cube_sha256": "4151c07e70f2ad438fdde0ce638d03f9d716c53afa9b455424fa27c25389fb56",
+      "current_cube_sha256": "ce3d24118cacb663a7d25427e3eaedceaaa5a6cb27602680a154ad83e03dc650",
+      "neutral_max_chroma_ab_before": 4.53095099402187,
+      "neutral_max_chroma_ab_after": 0.011659161972657688,
+      "coffee_effective_8bit_any_channel_black_fraction_before": 0.29823333333333335,
+      "coffee_effective_8bit_any_channel_black_fraction_after": 0.0,
+      "landscape_effective_8bit_any_channel_black_fraction_before": 0.1447389705882353,
+      "landscape_effective_8bit_any_channel_black_fraction_after": 0.0,
+      "status": "resolved_or_no_regression"
+    },
+    {
+      "id": "pro400h",
+      "previous_cube_sha256": "66b2b5875331198bc84be84553493cf7dc103372f829728eca98aea959d6a265",
+      "current_cube_sha256": "0548567735881c20ded2d36c74ed9ad31389665e0a6bbe3b519d15b774e2a394",
+      "neutral_max_chroma_ab_before": 8.60255822596471,
+      "neutral_max_chroma_ab_after": 0.0027104178759623752,
+      "coffee_effective_8bit_any_channel_black_fraction_before": 0.0,
+      "coffee_effective_8bit_any_channel_black_fraction_after": 0.0,
+      "landscape_effective_8bit_any_channel_black_fraction_before": 1.1029411764705883e-05,
+      "landscape_effective_8bit_any_channel_black_fraction_after": 0.0,
+      "status": "resolved_or_no_regression"
+    },
+    {
+      "id": "trix400",
+      "previous_cube_sha256": "09eea05c1ec545abe1489dae878bf53a08adcee518653f97763c3f7ea5e26051",
+      "current_cube_sha256": "dd7992f18b125b6bdfc5c0b3455ece28f4e359d4da1f4365c26acd146cd9ff25",
+      "neutral_max_chroma_ab_before": 1.728240496182362e-05,
+      "neutral_max_chroma_ab_after": 2.6471495605546556e-05,
+      "coffee_effective_8bit_any_channel_black_fraction_before": 0.0,
+      "coffee_effective_8bit_any_channel_black_fraction_after": 0.0,
+      "landscape_effective_8bit_any_channel_black_fraction_before": 0.0,
+      "landscape_effective_8bit_any_channel_black_fraction_after": 0.0,
+      "status": "resolved_or_no_regression"
+    }
+  ],
+  "final_rendering_choices": {
+    "display_adaptation": "Fixed inverse gray-ramp pre-shaper; per-stock input/stock-ramp shares and black/white targets recorded in bake manifest and shaper JSON. Internal calibration exposure [0,2]; public encoded-sRGB [0,1].",
+    "linear_delivery": "Luminance-axis chroma compression in linear sRGB before clipping, normalized gamut-distance knee 0.80 and asymptotic ceiling 0.985. This preserves linear chroma direction, not necessarily perceptual hue.",
+    "neutral_positive_timing": "Subtract the model gray crossover at the encoded mean output brightness, then softly contain colour distance in encoded RGB (knee 0.90, ceiling 0.995). Fixed model lookup; no per-image metering.",
+    "authorship": "These are authored delivery/positive decisions, not new manufacturer measurements or paired-film fitting."
+  },
+  "published_example_checks": {
+    "report": "research/example-renders.json",
+    "count": 25,
+    "current_lut_hashes_match": true,
+    "output_hashes_match": true,
+    "dimensions_match_sources": true,
+    "all_have_embedded_srgb_profiles": true,
+    "independent_jpeg_sample_count_per_file": 5000,
+    "largest_mean_absolute_8bit_code_difference": 2.075,
+    "largest_p95_absolute_8bit_code_difference": 7.0,
+    "interpretation": "Sampled released JPEG pixels are consistent with independently applying the current CUBEs, allowing for JPEG compression and quantisation. Hash checks identify the exact published files.",
+    "files": [
+      {
+        "look": "portra400",
+        "source": "skin-portrait",
+        "path": "examples/rendered/portra400/skin-portrait.jpg",
+        "sha256": "ddacecaae8160c3297313ff7b613623160fb6a68c5b55a804a377533f0c9de8e",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 1.0,
+        "absolute_jpeg_code_error_p95": 3.0,
+        "absolute_jpeg_code_error_max": 10.0
+      },
+      {
+        "look": "portra400",
+        "source": "warm-coffee",
+        "path": "examples/rendered/portra400/warm-coffee.jpg",
+        "sha256": "4cc178a6b3ad0a7da1c888feaa9769ad6af88bd1492d247c4fae18356e5667fe",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 2.005733333333333,
+        "absolute_jpeg_code_error_p95": 6.0,
+        "absolute_jpeg_code_error_max": 18.0
+      },
+      {
+        "look": "portra400",
+        "source": "landscape-sky",
+        "path": "examples/rendered/portra400/landscape-sky.jpg",
+        "sha256": "3ded4ab6cf8d08bd5a7ac70e04e3bd0b98edd8ab74c18b9cca8971134a734f0e",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 1.0864666666666667,
+        "absolute_jpeg_code_error_p95": 3.0,
+        "absolute_jpeg_code_error_max": 17.0
+      },
+      {
+        "look": "portra400",
+        "source": "night-city",
+        "path": "examples/rendered/portra400/night-city.jpg",
+        "sha256": "06385a1bf067ed73002d323f475a34bea42c8fd2858c36d02450af8e1b889357",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 1.5157333333333334,
+        "absolute_jpeg_code_error_p95": 5.0,
+        "absolute_jpeg_code_error_max": 17.0
+      },
+      {
+        "look": "portra400",
+        "source": "g7x-iii-canon-neutral",
+        "path": "examples/rendered/portra400/g7x-iii-canon-neutral.jpg",
+        "sha256": "560c6d3b57b3c32275c42d17bafcc100556cc1f8cf37f72509019fa349b8e0d0",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 1.8685333333333334,
+        "absolute_jpeg_code_error_p95": 6.0,
+        "absolute_jpeg_code_error_max": 18.0
+      },
+      {
+        "look": "gold200",
+        "source": "skin-portrait",
+        "path": "examples/rendered/gold200/skin-portrait.jpg",
+        "sha256": "4f86d95003e154860f50642bd17c8190588eba79789b4933118db2261cb9da5a",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 1.0267333333333333,
+        "absolute_jpeg_code_error_p95": 3.0,
+        "absolute_jpeg_code_error_max": 14.0
+      },
+      {
+        "look": "gold200",
+        "source": "warm-coffee",
+        "path": "examples/rendered/gold200/warm-coffee.jpg",
+        "sha256": "cb5324fd805ccb003fca8fd7f1f2a4b3242e943f80f5baabeeb19ed9e7e6a6e9",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 2.0397333333333334,
+        "absolute_jpeg_code_error_p95": 6.0,
+        "absolute_jpeg_code_error_max": 18.0
+      },
+      {
+        "look": "gold200",
+        "source": "landscape-sky",
+        "path": "examples/rendered/gold200/landscape-sky.jpg",
+        "sha256": "7fb87c002aeaca25be0a64a202c69337383cb17983145781cdb07d0e422ee303",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 1.0848666666666666,
+        "absolute_jpeg_code_error_p95": 3.0,
+        "absolute_jpeg_code_error_max": 18.0
+      },
+      {
+        "look": "gold200",
+        "source": "night-city",
+        "path": "examples/rendered/gold200/night-city.jpg",
+        "sha256": "5cef43eff4f417b103e366efe179eb91e32bb60a36d8668a250047a755e72b0d",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 1.4942666666666666,
+        "absolute_jpeg_code_error_p95": 5.0,
+        "absolute_jpeg_code_error_max": 17.0
+      },
+      {
+        "look": "gold200",
+        "source": "g7x-iii-canon-neutral",
+        "path": "examples/rendered/gold200/g7x-iii-canon-neutral.jpg",
+        "sha256": "9ebf8100e3266993474ccaf9fa2e40d68bb49f4214c1db6ffa3a3e44c5438a12",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 1.915,
+        "absolute_jpeg_code_error_p95": 6.0,
+        "absolute_jpeg_code_error_max": 14.0
+      },
+      {
+        "look": "ektar100",
+        "source": "skin-portrait",
+        "path": "examples/rendered/ektar100/skin-portrait.jpg",
+        "sha256": "4151a0a1571e04fda1ef15d7d50c68adff8946f5bd3c00f537d295c41ff82a1d",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 1.0283333333333333,
+        "absolute_jpeg_code_error_p95": 3.0,
+        "absolute_jpeg_code_error_max": 13.0
+      },
+      {
+        "look": "ektar100",
+        "source": "warm-coffee",
+        "path": "examples/rendered/ektar100/warm-coffee.jpg",
+        "sha256": "a8d3ebdcf60e78e2264fb8b1c014efb5491809b05594ae9d1bd08853b43feda8",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 2.075,
+        "absolute_jpeg_code_error_p95": 7.0,
+        "absolute_jpeg_code_error_max": 21.0
+      },
+      {
+        "look": "ektar100",
+        "source": "landscape-sky",
+        "path": "examples/rendered/ektar100/landscape-sky.jpg",
+        "sha256": "274ec328082e31e7365b07f156a91c582b47bd6b05e8c41b2de943de2e4fb2db",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 1.108,
+        "absolute_jpeg_code_error_p95": 4.0,
+        "absolute_jpeg_code_error_max": 18.0
+      },
+      {
+        "look": "ektar100",
+        "source": "night-city",
+        "path": "examples/rendered/ektar100/night-city.jpg",
+        "sha256": "eb866991cbc260234178339d0cf4e2d29d110f69f48a42a65c2e77cff77501fa",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 1.5052666666666668,
+        "absolute_jpeg_code_error_p95": 5.0,
+        "absolute_jpeg_code_error_max": 17.0
+      },
+      {
+        "look": "ektar100",
+        "source": "g7x-iii-canon-neutral",
+        "path": "examples/rendered/ektar100/g7x-iii-canon-neutral.jpg",
+        "sha256": "dcaa37e72e2e3c255d648b3f591767ec77296be9b615cc60f847193852d6f18f",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 1.9921333333333333,
+        "absolute_jpeg_code_error_p95": 6.0,
+        "absolute_jpeg_code_error_max": 22.0
+      },
+      {
+        "look": "pro400h",
+        "source": "skin-portrait",
+        "path": "examples/rendered/pro400h/skin-portrait.jpg",
+        "sha256": "44ce02ce4712728582b16fc3e0f96dbf89bb3b19f0f9f39f73323f958e84c363",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 0.9778,
+        "absolute_jpeg_code_error_p95": 3.0,
+        "absolute_jpeg_code_error_max": 9.0
+      },
+      {
+        "look": "pro400h",
+        "source": "warm-coffee",
+        "path": "examples/rendered/pro400h/warm-coffee.jpg",
+        "sha256": "4b3ad228fc645d36287f407987cd4bf913faf9d91b727f989d491098c852ac7d",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 1.9899333333333333,
+        "absolute_jpeg_code_error_p95": 6.0,
+        "absolute_jpeg_code_error_max": 16.0
+      },
+      {
+        "look": "pro400h",
+        "source": "landscape-sky",
+        "path": "examples/rendered/pro400h/landscape-sky.jpg",
+        "sha256": "a35c1ea9960f4a6f18b79e3546ccb20640bbd6ebfa4dca708815e67cf4519ce6",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 1.0867333333333333,
+        "absolute_jpeg_code_error_p95": 4.0,
+        "absolute_jpeg_code_error_max": 17.0
+      },
+      {
+        "look": "pro400h",
+        "source": "night-city",
+        "path": "examples/rendered/pro400h/night-city.jpg",
+        "sha256": "335fbe8acb16f8c33100589635018ac8a69c6f6d2ee23d6e4236432c1b87d528",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 1.5562666666666667,
+        "absolute_jpeg_code_error_p95": 5.0,
+        "absolute_jpeg_code_error_max": 14.0
+      },
+      {
+        "look": "pro400h",
+        "source": "g7x-iii-canon-neutral",
+        "path": "examples/rendered/pro400h/g7x-iii-canon-neutral.jpg",
+        "sha256": "b2eca345c2eb1d67fa5cd88702ab03f8e63738e02dbaf83ef46c23434c508492",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 1.6980666666666666,
+        "absolute_jpeg_code_error_p95": 5.0,
+        "absolute_jpeg_code_error_max": 16.0
+      },
+      {
+        "look": "trix400",
+        "source": "skin-portrait",
+        "path": "examples/rendered/trix400/skin-portrait.jpg",
+        "sha256": "4d8cfd65fb8b3ff1f4cfd6fcd54b41bccac3df961b885d6757ad2344e0871016",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 0.7132,
+        "absolute_jpeg_code_error_p95": 2.0,
+        "absolute_jpeg_code_error_max": 5.0
+      },
+      {
+        "look": "trix400",
+        "source": "warm-coffee",
+        "path": "examples/rendered/trix400/warm-coffee.jpg",
+        "sha256": "d155ec047cd11adebe2ee85858962348f4803aea05daadd78f6e845e1802db8d",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 1.1518,
+        "absolute_jpeg_code_error_p95": 4.0,
+        "absolute_jpeg_code_error_max": 9.0
+      },
+      {
+        "look": "trix400",
+        "source": "landscape-sky",
+        "path": "examples/rendered/trix400/landscape-sky.jpg",
+        "sha256": "a2d3a3d4161086f1258481971ea9cc0141fa18bb7cedd531a74c5e478ebb8646",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 0.6564,
+        "absolute_jpeg_code_error_p95": 2.0,
+        "absolute_jpeg_code_error_max": 6.0
+      },
+      {
+        "look": "trix400",
+        "source": "night-city",
+        "path": "examples/rendered/trix400/night-city.jpg",
+        "sha256": "9f59eea25e1fa6db36a6db17d200d1a545bafb68df1181c74553fdfb5c09e5a8",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 0.8486,
+        "absolute_jpeg_code_error_p95": 3.0,
+        "absolute_jpeg_code_error_max": 9.0
+      },
+      {
+        "look": "trix400",
+        "source": "g7x-iii-canon-neutral",
+        "path": "examples/rendered/trix400/g7x-iii-canon-neutral.jpg",
+        "sha256": "180818a36b0e32ca4b189be2263404a6c61a3a1925702502c5780e9926184cfb",
+        "lut_sha256_matches": true,
+        "output_hash_matches": true,
+        "dimensions_match_source": true,
+        "embedded_profile": "sRGB built-in",
+        "sampled_pixels": 5000,
+        "absolute_jpeg_code_error_mean": 0.5632,
+        "absolute_jpeg_code_error_p95": 2.0,
+        "absolute_jpeg_code_error_max": 4.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+G7X Film Lab 0.1.0
+
+Original film data: Fotufilm, Copyright 2026 MUAStudio Inc.
+https://fotufilm.com
+https://github.com/DhaliwalX/fotufilm-engine
+Source revision: 3a789c436716c902654f248166ebb4f580611146
+Film profile and derived asset license: CC BY-SA 4.0.
+
+Project modifications by G7X Film Lab contributors:
+- Bake the Portra 400, Gold 200, Ektar 100, Pro 400H and Tri-X 400 profiles
+  into fixed, pointwise sRGB-to-sRGB color and tone transforms.
+- Use fixed 5500 K virtual scene light and fixed Digital Reference / Graded
+  Print. Preserve local cross-layer color interactions; disable spatial
+  diffusion, grain, halation, lens flare, adjacency and scene auto-metering.
+- Add an explicit display-input adaptation calibrated against each stock's
+  extended model gray ramp. Its authored finishing settings are recorded per
+  look; these are not additional manufacturer measurements.
+- Export 65-cubed desktop CUBE LUTs and independently authored Canon PF3 files.
+- Include original format tooling, numerical checks, source provenance and
+  photo examples. Physical film/camera matching is not established by these
+  software checks. No Canon firmware or Canon software is redistributed.

@@ -1,0 +1,12 @@
+{
+  "python": "3.13.13",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "Pillow": "13.0.0",
+  "colour-science": "0.4.7",
+  "matplotlib": "3.11.2",
+  "platform": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+  "model_engine_revision": "3a789c436716c902654f248166ebb4f580611146",
+  "swift": "Apple Swift 6.3.2",
+  "halide": "21.0.0 arm64 macOS"
+}

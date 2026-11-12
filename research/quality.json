@@ -1,0 +1,182 @@
+{
+  "scope": "LUT interpolation and format fidelity against the project's specified spectral model + authored display adaptation. Not accuracy against physical film or measured camera output.",
+  "looks": [
+    {
+      "id": "portra400",
+      "samples": 8192,
+      "seed": 49004,
+      "cube_sha256": "066e0e607fa69cdc99bb21e03cf008b0f51392332f8f6c7181886281d499b471",
+      "pf3_sha256": "7c9b1560685f0176586ddc2d8aa3de1a1bc767c0206f085236a080cd5c99d28d",
+      "cube65_vs_direct_model": {
+        "delta_e00_mean": 0.02366393568048089,
+        "delta_e00_p95": 0.07728514259715893,
+        "delta_e00_p99": 0.14390049772609975,
+        "delta_e00_max": 0.38554410990643234,
+        "encoded_rgb_rmse": 0.0004292492255608548
+      },
+      "quantized33_table_vs_direct_model": {
+        "delta_e00_mean": 0.05962389223890114,
+        "delta_e00_p95": 0.18075335372759352,
+        "delta_e00_p99": 0.29880576496060995,
+        "delta_e00_max": 0.7827187491860353,
+        "encoded_rgb_rmse": 0.0012261645702328558
+      },
+      "permutation_max_encoded_rgb_difference": 0.0,
+      "neutral_max_chroma_ab": 0.008242253833848417,
+      "neutral_black": [
+        0.035000176,
+        0.034999708,
+        0.034999914
+      ],
+      "neutral_white": [
+        0.960000005,
+        0.95999998,
+        0.95999995
+      ],
+      "minimum_gray_step": 8.144402343748108e-05,
+      "maximum_gray_rgb_spread": 5.9472000000004854e-05
+    },
+    {
+      "id": "gold200",
+      "samples": 8192,
+      "seed": 49004,
+      "cube_sha256": "119a946d4ff915005939619ac78924991589f99d94a9eed4b7497514f75120ab",
+      "pf3_sha256": "f96faa550bffc52192c5b6d16dfa5535726785ac81d9dd04654bb8e063e61429",
+      "cube65_vs_direct_model": {
+        "delta_e00_mean": 0.0261610972106062,
+        "delta_e00_p95": 0.09097280906003413,
+        "delta_e00_p99": 0.15562694643522976,
+        "delta_e00_max": 0.4170675067069972,
+        "encoded_rgb_rmse": 0.0005228430448563139
+      },
+      "quantized33_table_vs_direct_model": {
+        "delta_e00_mean": 0.06591383690359146,
+        "delta_e00_p95": 0.2108437874589241,
+        "delta_e00_p99": 0.3875050709179325,
+        "delta_e00_max": 0.778848203436477,
+        "encoded_rgb_rmse": 0.0014601812940060245
+      },
+      "permutation_max_encoded_rgb_difference": 0.0,
+      "neutral_max_chroma_ab": 0.008237116021987165,
+      "neutral_black": [
+        0.024999968,
+        0.024999859,
+        0.025000158
+      ],
+      "neutral_white": [
+        0.960000028,
+        0.96000007,
+        0.959999957
+      ],
+      "minimum_gray_step": 7.420271614581864e-05,
+      "maximum_gray_rgb_spread": 1.9529999999989833e-06
+    },
+    {
+      "id": "ektar100",
+      "samples": 8192,
+      "seed": 49004,
+      "cube_sha256": "ce3d24118cacb663a7d25427e3eaedceaaa5a6cb27602680a154ad83e03dc650",
+      "pf3_sha256": "15194b4c96461b9a958cde382498360f5e7e7876d8316e87de365f2e59edcb2a",
+      "cube65_vs_direct_model": {
+        "delta_e00_mean": 0.02634210461223506,
+        "delta_e00_p95": 0.08504003047607024,
+        "delta_e00_p99": 0.15264193148249988,
+        "delta_e00_max": 0.427219763331542,
+        "encoded_rgb_rmse": 0.0005158297882804636
+      },
+      "quantized33_table_vs_direct_model": {
+        "delta_e00_mean": 0.07110854738549328,
+        "delta_e00_p95": 0.21598096019255764,
+        "delta_e00_p99": 0.40571462108755285,
+        "delta_e00_max": 1.1333468014325312,
+        "encoded_rgb_rmse": 0.00159080388342779
+      },
+      "permutation_max_encoded_rgb_difference": 0.0,
+      "neutral_max_chroma_ab": 0.00831446691881251,
+      "neutral_black": [
+        0.019999877,
+        0.020000308,
+        0.020000172
+      ],
+      "neutral_white": [
+        0.96500004,
+        0.96500008,
+        0.964999921
+      ],
+      "minimum_gray_step": 6.0258119791656295e-05,
+      "maximum_gray_rgb_spread": 0.000103903999999988
+    },
+    {
+      "id": "pro400h",
+      "samples": 8192,
+      "seed": 49004,
+      "cube_sha256": "0548567735881c20ded2d36c74ed9ad31389665e0a6bbe3b519d15b774e2a394",
+      "pf3_sha256": "bfccf7ec634adfda6ea348ab9cbd9c2b0d0f2bd0d1dcbe919b8c4315c3dc2c91",
+      "cube65_vs_direct_model": {
+        "delta_e00_mean": 0.027035734157469953,
+        "delta_e00_p95": 0.09537716053154134,
+        "delta_e00_p99": 0.17846031611759808,
+        "delta_e00_max": 0.6870951826471519,
+        "encoded_rgb_rmse": 0.0005122435118762305
+      },
+      "quantized33_table_vs_direct_model": {
+        "delta_e00_mean": 0.0766570222637674,
+        "delta_e00_p95": 0.27555974900150443,
+        "delta_e00_p99": 0.49790577882851433,
+        "delta_e00_max": 1.1742469864525997,
+        "encoded_rgb_rmse": 0.0015311999520294616
+      },
+      "permutation_max_encoded_rgb_difference": 0.0,
+      "neutral_max_chroma_ab": 0.008240406860267703,
+      "neutral_black": [
+        0.040000072,
+        0.039999959,
+        0.040000196
+      ],
+      "neutral_white": [
+        0.96000012,
+        0.96000012,
+        0.960000052
+      ],
+      "minimum_gray_step": 8.759817708332146e-05,
+      "maximum_gray_rgb_spread": 2.076199999999362e-05
+    },
+    {
+      "id": "trix400",
+      "samples": 8192,
+      "seed": 49004,
+      "cube_sha256": "dd7992f18b125b6bdfc5c0b3455ece28f4e359d4da1f4365c26acd146cd9ff25",
+      "pf3_sha256": "f2aced9e09aa0724880985a67ca9feecbadaed7c2c041686769d7609a2fdf810",
+      "cube65_vs_direct_model": {
+        "delta_e00_mean": 0.012003096797051707,
+        "delta_e00_p95": 0.043235127722234756,
+        "delta_e00_p99": 0.08563294067597664,
+        "delta_e00_max": 0.21008747860444865,
+        "encoded_rgb_rmse": 0.00025873031186144366
+      },
+      "quantized33_table_vs_direct_model": {
+        "delta_e00_mean": 0.03041533228609607,
+        "delta_e00_p95": 0.10540835556141617,
+        "delta_e00_p99": 0.18148539732225386,
+        "delta_e00_max": 0.36821585735649615,
+        "encoded_rgb_rmse": 0.0005831580274900071
+      },
+      "permutation_max_encoded_rgb_difference": 0.0,
+      "neutral_max_chroma_ab": 0.008238545052431745,
+      "neutral_black": [
+        0.01499995,
+        0.014999949,
+        0.01499995
+      ],
+      "neutral_white": [
+        0.959999979,
+        0.959999979,
+        0.960000098
+      ],
+      "minimum_gray_step": 4.614171093749592e-05,
+      "maximum_gray_rgb_spread": 1.1900000007614153e-07
+    }
+  ],
+  "physical_film_match_measured": false,
+  "physical_camera_output_measured": false
+}

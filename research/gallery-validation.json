@@ -1,0 +1,13 @@
+{
+  "engine": "Playwright Chromium, isolated headless browser",
+  "entry": "START-HERE.html via local file URL",
+  "look_options": 5,
+  "photo_options": 5,
+  "all_25_image_pairs_loaded": true,
+  "keyboard_split_value": "25%",
+  "desktop_width": 1280,
+  "mobile_width": 390,
+  "mobile_horizontal_overflow": false,
+  "page_errors": [],
+  "camera_connected": false
+}

@@ -1,0 +1,17 @@
+.venv/
+.cache/
+.build/
+**/.build/
+__pycache__/
+*.pyc
+.DS_Store
+dist/
+private/
+*.CR3
+*.FIR
+*.dmg
+*.pkg
+*.zip
+**/calibration-factors*
+*.egg-info/
+build/
