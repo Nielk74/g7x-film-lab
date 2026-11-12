@@ -61,6 +61,8 @@ The retained [quality report](research/quality.json) measures interpolation agai
 
 ## Optional desktop preview command
 
+Run this from a source checkout of the repository:
+
 ```sh
 python3 -m pip install .
 g7x-film input.jpg --lut luts/portra400.cube --output portra-preview.jpg
